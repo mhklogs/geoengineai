@@ -1,0 +1,6 @@
+{
+  "name": "GEOEngine AI",
+  "description": "High-performance Generative Engine Optimization (GEO) auditing pipeline to evaluate structural crawlability and deliver deterministic structured optimizations for LLM & RAG citations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

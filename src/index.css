@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Montserrat", sans-serif;
+}
+
+/* Pixis AI Inspired Visual Identity variables & styles */
+:root {
+  --pixis-black: #04060a;
+  --pixis-dark: #090e1a;
+  --pixis-card: rgba(9, 14, 26, 0.7);
+  --pixis-card-hover: rgba(14, 22, 41, 0.85);
+  --pixis-border: rgba(255, 255, 255, 0.08);
+  --pixis-border-hover: rgba(255, 255, 255, 0.16);
+  --pixis-glow-green: rgba(16, 185, 129, 0.15);
+  --pixis-glow-cyan: rgba(6, 182, 212, 0.15);
+  --pixis-glow-violet: rgba(139, 92, 246, 0.15);
+  --pixis-glow-pink: rgba(236, 72, 153, 0.15);
+  
+  --markdown-bg-pre: #090e1a;
+  --markdown-color-pre: #f1f5f9;
+  --markdown-border-pre: rgba(255, 255, 255, 0.1);
+  --markdown-bg-code: rgba(255, 255, 255, 0.05);
+  --markdown-color-code: #00f2fe;
+  --markdown-border-code: rgba(255, 255, 255, 0.08);
+  --markdown-border-quote: #00f2fe;
+  --markdown-color-quote: #94a3b8;
+  --markdown-color-li: #cbd5e1;
+  --markdown-color-heading: #ffffff;
+  --markdown-border-heading: rgba(255, 255, 255, 0.1);
+  --markdown-color-p: #cbd5e1;
+  --markdown-h3-color: #00f2fe;
+}
+
+/* Custom background grid pattern inspired by pixis.ai */
+.pixis-grid-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 24px_24px;
+}
+
+.pixis-grid-lines {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Sleek frosted glass cards with gorgeous borders */
+.pixis-glass {
+  background: var(--pixis-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--pixis-border);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pixis-glass:hover {
+  background: var(--pixis-card-hover);
+  border-color: var(--pixis-border-hover);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+}
+
+/* Pulsing accent shadows and glowing effects */
+.pixis-glow-emerald:hover {
+  box-shadow: 0 0 30px var(--pixis-glow-green);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.pixis-glow-cyan:hover {
+  box-shadow: 0 0 30px var(--pixis-glow-cyan);
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+.pixis-glow-violet:hover {
+  box-shadow: 0 0 30px var(--pixis-glow-violet);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.pixis-glow-pink:hover {
+  box-shadow: 0 0 30px var(--pixis-glow-pink);
+  border-color: rgba(236, 72, 153, 0.3);
+}
+
+/* Animated gradient text */
+.text-pixis-gradient {
+  background: linear-gradient(135deg, #10b981 0%, #06b6d4 30%, #8b5cf6 70%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-pixis-gradient-cyan-purple {
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 40%, #7f00ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-pixis-gradient-lime-cyan {
+  background: linear-gradient(135deg, #34d399 0%, #059669 30%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Premium Pixis continuous loop logo animation placeholder */
+@keyframes pixis-spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-pixis-spin {
+  animation: pixis-spin-slow 20s linear infinite;
+}
+
+@keyframes pixis-pulse-slow {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.1); opacity: 0.5; }
+}
+
+.animate-pixis-pulse {
+  animation: pixis-pulse-slow 8s ease-in-out infinite;
+}
+
+/* Custom styles for professional code backgrounds and layout */
+:root {
+  --markdown-bg-pre: #f8fafc;
+  --markdown-color-pre: #0f172a;
+  --markdown-border-pre: #cbd5e1;
+  --markdown-bg-code: #f1f5f9;
+  --markdown-color-code: #0369a1;
+  --markdown-border-code: #e2e8f0;
+  --markdown-border-quote: #0ea5e9;
+  --markdown-color-quote: #475569;
+  --markdown-color-li: #334155;
+  --markdown-color-heading: #0f172a;
+  --markdown-border-heading: #e2e8f0;
+  --markdown-color-p: #334155;
+  --markdown-h3-color: #0369a1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --markdown-bg-pre: #020617;
+    --markdown-color-pre: #f1f5f9;
+    --markdown-border-pre: #1e293b;
+    --markdown-bg-code: #0f172a;
+    --markdown-color-code: #38bdf8;
+    --markdown-border-code: #1e293b;
+    --markdown-border-quote: #0ea5e9;
+    --markdown-color-quote: #94a3b8;
+    --markdown-color-li: #cbd5e1;
+    --markdown-color-heading: #ffffff;
+    --markdown-border-heading: #1e293b;
+    --markdown-color-p: #cbd5e1;
+    --markdown-h3-color: #38bdf8;
+  }
+}
+
+.markdown-body {
+  font-family: var(--font-sans);
+}
+
+.markdown-body pre {
+  background-color: var(--markdown-bg-pre);
+  color: var(--markdown-color-pre);
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.825rem;
+  margin: 1.25rem 0;
+  border: 1px solid var(--markdown-border-pre);
+  line-height: 1.6;
+}
+
+.markdown-body code {
+  font-family: var(--font-mono);
+  background-color: var(--markdown-bg-code);
+  color: var(--markdown-color-code);
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.35rem;
+  font-size: 0.825rem;
+  border: 1px solid var(--markdown-border-code);
+}
+
+.markdown-body pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  border: none;
+  font-size: inherit;
+}
+
+.markdown-body blockquote {
+  border-left: 4px solid var(--markdown-border-quote);
+  padding-left: 1.25rem;
+  color: var(--markdown-color-quote);
+  font-style: italic;
+  margin: 1.25rem 0;
+}
+
+.markdown-body ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 1.25rem 0;
+}
+
+.markdown-body li {
+  margin-bottom: 0.625rem;
+  color: var(--markdown-color-li);
+}
+
+.markdown-body h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-top: 2.25rem;
+  margin-bottom: 1.25rem;
+  color: var(--markdown-color-heading);
+  letter-spacing: -0.025em;
+}
+
+.markdown-body h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--markdown-color-heading);
+  border-bottom: 1px solid var(--markdown-border-heading);
+  padding-bottom: 0.5rem;
+  letter-spacing: -0.025em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--markdown-h3-color);
+}
+
+.markdown-body p {
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+  color: var(--markdown-color-p);
+}
+
+/* Smooth scrolling and sleek tech scrollbar */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(6, 182, 212, 0.3) #04060a;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #04060a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  border: 2px solid #04060a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 182, 212, 0.4);
+}
+
