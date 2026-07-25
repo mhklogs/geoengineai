@@ -22,7 +22,6 @@ import EngineeringTeam from "./components/EngineeringTeam";
 import CustomCursor from "./components/CustomCursor";
 import ScrollReveal from "./components/ScrollReveal";
 import { TierType } from "./types";
-import heroBg from "./assets/hero-bg.jpeg";
 
 export default function App() {
   const [activeTier, setActiveTier] = useState<TierType>("FREE");
@@ -152,7 +151,7 @@ export default function App() {
         {/* Background Image with Dark Vignette Overlay */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <img 
-            src={heroBg} 
+            src="/hero-bg.jpeg" 
             alt="Generative Engine Optimization Visual" 
             className="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity filter brightness-110 contrast-125 scale-105"
           />
