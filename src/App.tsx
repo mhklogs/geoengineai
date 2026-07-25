@@ -22,6 +22,7 @@ import EngineeringTeam from "./components/EngineeringTeam";
 import CustomCursor from "./components/CustomCursor";
 import ScrollReveal from "./components/ScrollReveal";
 import { TierType } from "./types";
+import heroBg from "./assets/hero-bg.jpeg";
 
 export default function App() {
   const [activeTier, setActiveTier] = useState<TierType>("FREE");
@@ -148,13 +149,24 @@ export default function App() {
       {/* 2. Hero Section & Performance Strip */}
       <section className="relative overflow-hidden bg-[#02040a] pt-32 pb-24 border-b border-white/[0.08]">
         
+        {/* Background Image with Dark Vignette Overlay */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          <img 
+            src={heroBg} 
+            alt="Generative Engine Optimization Visual" 
+            className="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity filter brightness-110 contrast-125 scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#02040a]/90 via-[#02040a]/75 to-[#02040a]"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#02040a] via-transparent to-[#02040a]/90"></div>
+        </div>
+
         {/* Futuristic Grid & Ambient Glows */}
-        <div className="absolute inset-0 pixis-grid-lines opacity-30"></div>
-        <div className="absolute inset-0 pixis-grid-dots opacity-25"></div>
+        <div className="absolute inset-0 pixis-grid-lines opacity-25 z-0"></div>
+        <div className="absolute inset-0 pixis-grid-dots opacity-20 z-0"></div>
         
         {/* Floating Pixis Glowing Orbs */}
-        <div className="absolute right-0 top-1/4 w-[450px] h-[450px] bg-gradient-to-tr from-sky-500/15 to-slate-300/10 rounded-full blur-[120px] pointer-events-none -mr-32 animate-pixis-pulse"></div>
-        <div className="absolute left-10 bottom-1/4 w-[350px] h-[350px] bg-gradient-to-tr from-sky-400/10 to-slate-400/5 rounded-full blur-[120px] pointer-events-none -ml-16 animate-pixis-pulse" style={{ animationDelay: "2s" }}></div>
+        <div className="absolute right-0 top-1/4 w-[450px] h-[450px] bg-gradient-to-tr from-sky-500/15 to-slate-300/10 rounded-full blur-[120px] pointer-events-none -mr-32 animate-pixis-pulse z-0"></div>
+        <div className="absolute left-10 bottom-1/4 w-[350px] h-[350px] bg-gradient-to-tr from-sky-400/10 to-slate-400/5 rounded-full blur-[120px] pointer-events-none -ml-16 animate-pixis-pulse z-0" style={{ animationDelay: "2s" }}></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
