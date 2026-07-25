@@ -7,7 +7,7 @@ import { GoogleGenAI, Type } from "@google/genai";
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3030;
 
 // Increase limit to handle large HTML dumps
 app.use(express.json({ limit: "15mb" }));

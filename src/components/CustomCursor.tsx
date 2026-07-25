@@ -83,8 +83,8 @@ export default function CustomCursor() {
           x: cursorXSpring,
           y: cursorYSpring,
           scale: isHoveringInteractive ? 1.4 : 1,
-          borderColor: hoverData ? "rgba(16, 185, 129, 0.6)" : "rgba(6, 182, 212, 0.35)",
-          backgroundColor: hoverData ? "rgba(16, 185, 129, 0.03)" : "rgba(6, 182, 212, 0.01)",
+          borderColor: hoverData ? "rgba(56, 189, 248, 0.7)" : "rgba(125, 211, 252, 0.4)",
+          backgroundColor: hoverData ? "rgba(56, 189, 248, 0.05)" : "rgba(125, 211, 252, 0.02)",
         }}
         transition={{ type: "spring", stiffness: 350, damping: 25 }}
       />
@@ -95,10 +95,10 @@ export default function CustomCursor() {
         style={{
           x: cursorXSpring,
           y: cursorYSpring,
-          backgroundColor: hoverData ? "#10b981" : "#22d3ee",
+          backgroundColor: hoverData ? "#38bdf8" : "#7dd3fc",
           boxShadow: hoverData 
-            ? "0 0 10px rgba(16, 185, 129, 0.8)" 
-            : "0 0 10px rgba(34, 211, 238, 0.8)",
+            ? "0 0 12px rgba(56, 189, 248, 0.9)" 
+            : "0 0 10px rgba(125, 211, 252, 0.8)",
         }}
       />
 
@@ -115,15 +115,15 @@ export default function CustomCursor() {
           exit={{ opacity: 0, scale: 0.92, y: 15 }}
           transition={{ duration: 0.2, ease: "easeOut" }}
         >
-          <div className="bg-[#06080d]/95 backdrop-blur-xl border border-white/[0.08] rounded-xl p-4 shadow-[0_20px_50px_rgba(0,0,0,0.8)] relative overflow-hidden">
+          <div className="bg-[#040812]/95 backdrop-blur-xl border border-sky-500/20 rounded-xl p-4 shadow-[0_20px_50px_rgba(0,0,0,0.8)] relative overflow-hidden">
             {/* Top scanning lines effect */}
             <div className="absolute inset-0 pixis-grid-lines opacity-10 pointer-events-none"></div>
             
-            {/* Ambient subtle gradient bar */}
-            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-emerald-500 via-cyan-500 to-purple-500"></div>
+            {/* Ambient titanium & ice blue gradient bar */}
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-slate-200 via-sky-400 to-sky-600"></div>
 
             {hoverData.action && (
-              <span className="text-[8px] font-mono text-emerald-400 font-extrabold uppercase tracking-[0.2em] block mb-1.5">
+              <span className="text-[8px] font-mono text-sky-400 font-extrabold uppercase tracking-[0.2em] block mb-1.5">
                 // {hoverData.action}
               </span>
             )}
@@ -135,15 +135,15 @@ export default function CustomCursor() {
             )}
             
             {hoverData.desc && (
-              <p className="text-[10px] text-slate-400 font-sans mt-2 leading-relaxed">
+              <p className="text-[10px] text-slate-300 font-sans mt-2 leading-relaxed">
                 {hoverData.desc}
               </p>
             )}
 
             {/* Micro-tech scan line detail */}
-            <div className="mt-3 pt-2.5 border-t border-white/[0.04] flex items-center justify-between text-[8px] font-mono text-slate-500">
+            <div className="mt-3 pt-2.5 border-t border-white/[0.04] flex items-center justify-between text-[8px] font-mono text-slate-400">
               <span>SCANNING PARITY...</span>
-              <span className="text-emerald-400">● STABLE</span>
+              <span className="text-sky-400">● STABLE</span>
             </div>
           </div>
         </motion.div>

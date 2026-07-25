@@ -233,17 +233,17 @@ END HTML`);
   const currentSOV = engineSOV[selectedEngine];
 
   return (
-    <section className="py-24 bg-[#04060a] relative overflow-hidden" id="live-sandbox" ref={sandboxRef}>
+    <section className="py-24 bg-[#02040a] relative overflow-hidden" id="live-sandbox" ref={sandboxRef}>
       <div className="absolute inset-0 pixis-grid-lines opacity-20"></div>
       
       {/* Absolute Decorative Glow Blob */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-emerald-500/5 to-cyan-500/10 rounded-full blur-[140px] pointer-events-none z-0 animate-pixis-pulse"></div>
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-sky-500/10 to-slate-200/10 rounded-full blur-[140px] pointer-events-none z-0 animate-pixis-pulse"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-emerald-400 font-mono bg-white/[0.02] border border-white/[0.08] px-4 py-2 rounded-full">
+          <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-sky-400 font-mono bg-white/[0.03] border border-sky-500/20 px-4 py-2 rounded-full">
             REAL-TIME INTELLIGENCE
           </span>
           <h2 className="font-display text-3xl font-extrabold text-white tracking-tight sm:text-4xl mt-6">
@@ -257,12 +257,12 @@ END HTML`);
         {/* =========================================
             PART 1: INTERACTIVE SOV DASHBOARD
             ========================================= */}
-        <div className="bg-white/[0.02] border border-white/[0.06] backdrop-blur-xl rounded-2xl p-6 sm:p-8 mb-12 shadow-2xl">
+        <div className="bg-white/[0.02] border border-white/[0.08] backdrop-blur-xl rounded-2xl p-6 sm:p-8 mb-12 shadow-2xl">
           
-          <div className="flex flex-col lg:flex-row items-start justify-between gap-8 border-b border-white/[0.06] pb-8 mb-8">
+          <div className="flex flex-col lg:flex-row items-start justify-between gap-8 border-b border-white/[0.08] pb-8 mb-8">
             <div>
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse" />
                 <h3 className="text-base font-bold text-white tracking-tight font-mono">
                   Live Brand Visibility Index
                 </h3>
@@ -280,7 +280,7 @@ END HTML`);
                   onClick={() => setSelectedEngine(eng)}
                   className={`flex-1 sm:flex-initial px-5 py-2.5 rounded-lg text-xs font-bold font-mono transition-all uppercase tracking-widest cursor-pointer ${
                     selectedEngine === eng
-                      ? "bg-gradient-to-r from-emerald-500 via-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/10"
+                      ? "bg-gradient-to-r from-slate-100 via-sky-400 to-sky-600 text-slate-950 shadow-lg shadow-sky-500/20"
                       : "text-slate-400 hover:text-white hover:bg-white/[0.04]"
                   }`}
                 >
@@ -293,7 +293,7 @@ END HTML`);
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             
             {/* Left Circular Progress Gauge */}
-            <div className="md:col-span-4 flex flex-col items-center justify-center p-6 bg-white/[0.01] rounded-2xl border border-white/[0.06] text-center relative overflow-hidden">
+            <div className="md:col-span-4 flex flex-col items-center justify-center p-6 bg-white/[0.01] rounded-2xl border border-white/[0.08] text-center relative overflow-hidden">
               <span className="text-[10px] text-slate-400 font-mono font-bold uppercase tracking-widest mb-4 block">
                 OVERALL SHARE OF VOICE
               </span>
@@ -309,7 +309,7 @@ END HTML`);
                     d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                   />
                   <path
-                    className="text-cyan-400 transition-all duration-1000 ease-out"
+                    className="text-sky-400 transition-all duration-1000 ease-out"
                     strokeDasharray={`${currentSOV.yourBrand}, 100`}
                     strokeWidth="3.2"
                     strokeLinecap="round"
@@ -331,13 +331,13 @@ END HTML`);
               <div className="mt-4">
                 <span className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold font-mono uppercase ${
                   currentSOV.status === "optimal" 
-                    ? "bg-emerald-400/10 text-emerald-400 border border-emerald-400/20"
+                    ? "bg-sky-400/10 text-sky-400 border border-sky-400/20"
                     : currentSOV.status === "warning"
                     ? "bg-amber-400/10 text-amber-400 border border-amber-400/20"
                     : "bg-rose-400/10 text-rose-400 border border-rose-400/20"
                 }`}>
                   <span className={`w-1.5 h-1.5 rounded-full ${
-                    currentSOV.status === "optimal" ? "bg-emerald-400" : currentSOV.status === "warning" ? "bg-amber-400" : "bg-rose-400"
+                    currentSOV.status === "optimal" ? "bg-sky-400" : currentSOV.status === "warning" ? "bg-amber-400" : "bg-rose-400"
                   } animate-pulse`}></span>
                   {currentSOV.status} Status
                 </span>

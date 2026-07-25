@@ -7,38 +7,38 @@
   --font-mono: "Montserrat", sans-serif;
 }
 
-/* Pixis AI Inspired Visual Identity variables & styles */
+/* Minimalist Titanium & Ice Blue Visual Identity variables & styles */
 :root {
-  --pixis-black: #04060a;
-  --pixis-dark: #090e1a;
-  --pixis-card: rgba(9, 14, 26, 0.7);
-  --pixis-card-hover: rgba(14, 22, 41, 0.85);
+  --pixis-black: #02040a;
+  --pixis-dark: #070d19;
+  --pixis-card: rgba(11, 19, 36, 0.7);
+  --pixis-card-hover: rgba(18, 30, 56, 0.85);
   --pixis-border: rgba(255, 255, 255, 0.08);
-  --pixis-border-hover: rgba(255, 255, 255, 0.16);
-  --pixis-glow-green: rgba(16, 185, 129, 0.15);
-  --pixis-glow-cyan: rgba(6, 182, 212, 0.15);
-  --pixis-glow-violet: rgba(139, 92, 246, 0.15);
-  --pixis-glow-pink: rgba(236, 72, 153, 0.15);
+  --pixis-border-hover: rgba(56, 189, 248, 0.35);
+  --pixis-glow-green: rgba(56, 189, 248, 0.2);
+  --pixis-glow-cyan: rgba(125, 211, 252, 0.25);
+  --pixis-glow-violet: rgba(226, 232, 240, 0.2);
+  --pixis-glow-pink: rgba(248, 250, 252, 0.2);
   
-  --markdown-bg-pre: #090e1a;
-  --markdown-color-pre: #f1f5f9;
-  --markdown-border-pre: rgba(255, 255, 255, 0.1);
-  --markdown-bg-code: rgba(255, 255, 255, 0.05);
-  --markdown-color-code: #00f2fe;
-  --markdown-border-code: rgba(255, 255, 255, 0.08);
-  --markdown-border-quote: #00f2fe;
+  --markdown-bg-pre: #070d19;
+  --markdown-color-pre: #f8fafc;
+  --markdown-border-pre: rgba(56, 189, 248, 0.2);
+  --markdown-bg-code: rgba(56, 189, 248, 0.08);
+  --markdown-color-code: #38bdf8;
+  --markdown-border-code: rgba(56, 189, 248, 0.2);
+  --markdown-border-quote: #38bdf8;
   --markdown-color-quote: #94a3b8;
   --markdown-color-li: #cbd5e1;
   --markdown-color-heading: #ffffff;
   --markdown-border-heading: rgba(255, 255, 255, 0.1);
   --markdown-color-p: #cbd5e1;
-  --markdown-h3-color: #00f2fe;
+  --markdown-h3-color: #38bdf8;
 }
 
-/* Custom background grid pattern inspired by pixis.ai */
+/* Custom background grid pattern */
 .pixis-grid-dots {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 24px_24px;
+  background-image: radial-gradient(rgba(56, 189, 248, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
 .pixis-grid-lines {
@@ -48,7 +48,7 @@
   background-size: 40px 40px;
 }
 
-/* Sleek frosted glass cards with gorgeous borders */
+/* Sleek frosted glass cards with titanium & ice blue borders */
 .pixis-glass {
   background: var(--pixis-card);
   backdrop-filter: blur(16px);
@@ -60,33 +60,33 @@
 .pixis-glass:hover {
   background: var(--pixis-card-hover);
   border-color: var(--pixis-border-hover);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 40px -15px rgba(56, 189, 248, 0.15);
 }
 
-/* Pulsing accent shadows and glowing effects */
+/* Pulsing ice blue & titanium accent glow effects */
 .pixis-glow-emerald:hover {
-  box-shadow: 0 0 30px var(--pixis-glow-green);
-  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.25);
+  border-color: rgba(56, 189, 248, 0.4);
 }
 
 .pixis-glow-cyan:hover {
-  box-shadow: 0 0 30px var(--pixis-glow-cyan);
-  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 0 30px rgba(125, 211, 252, 0.3);
+  border-color: rgba(125, 211, 252, 0.5);
 }
 
 .pixis-glow-violet:hover {
-  box-shadow: 0 0 30px var(--pixis-glow-violet);
-  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 0 30px rgba(226, 232, 240, 0.25);
+  border-color: rgba(226, 232, 240, 0.4);
 }
 
 .pixis-glow-pink:hover {
-  box-shadow: 0 0 30px var(--pixis-glow-pink);
-  border-color: rgba(236, 72, 153, 0.3);
+  box-shadow: 0 0 30px rgba(248, 250, 252, 0.25);
+  border-color: rgba(248, 250, 252, 0.4);
 }
 
-/* Animated gradient text */
+/* Animated titanium & ice blue gradient text */
 .text-pixis-gradient {
-  background: linear-gradient(135deg, #10b981 0%, #06b6d4 30%, #8b5cf6 70%, #ec4899 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 35%, #38bdf8 70%, #0284c7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -94,7 +94,7 @@
 }
 
 .text-pixis-gradient-cyan-purple {
-  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 40%, #7f00ff 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #7dd3fc 45%, #0284c7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -102,7 +102,7 @@
 }
 
 .text-pixis-gradient-lime-cyan {
-  background: linear-gradient(135deg, #34d399 0%, #059669 30%, #06b6d4 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #94a3b8 40%, #38bdf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
