@@ -930,6 +930,30 @@ END HTML`);
                           </div>
                         )}
 
+                        {/* Fallback: result was generated under a different tier */}
+                        {(() => {
+                          if (activeTier === "FREE" && !result.parsedData.free) return true;
+                          if (activeTier === "STANDARD" && !result.parsedData.standard) return true;
+                          if (activeTier === "PRO" && !result.parsedData.pro) return true;
+                          return false;
+                        })() && (
+                          <div className="bg-amber-500/[0.04] dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/30 rounded-xl p-6 flex flex-col items-start gap-3 transition-colors">
+                            <span className="text-[10px] font-mono font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wide flex items-center gap-1.5">
+                              <AlertTriangle className="w-4 h-4" />
+                              Tier Mismatch Detected
+                            </span>
+                            <p className="text-xs text-amber-900 dark:text-amber-200 leading-relaxed">
+                              This output was generated under the <strong className="font-mono">{result.tier}</strong> tier. Switch the tier selector to <strong className="font-mono">{activeTier}</strong> and re-run the audit to render its visualization.
+                            </p>
+                            <button
+                              onClick={handleRunAudit}
+                              className="mt-1 bg-amber-500 hover:bg-amber-600 text-white font-mono text-[10px] font-bold py-2.5 px-4 rounded-lg uppercase tracking-widest transition-colors cursor-pointer"
+                            >
+                              Re-run as {activeTier}
+                            </button>
+                          </div>
+                        )}
+
                       </div>
                     )}
 
