@@ -85,7 +85,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-void font-sans text-ink flex flex-col antialiased selection:bg-geo selection:text-white">
+    <div className="min-h-screen bg-void font-sans text-ink flex flex-col antialiased selection:bg-geo selection:text-ink">
       <CustomCursor />
 
       {/* ================= HEADER ================= */}
@@ -99,7 +99,7 @@ export default function App() {
               <span className="font-display font-bold tracking-wide text-ink text-base block">
                 GEO<span className="text-geo">Engine</span>
               </span>
-              <span className="text-[9px] text-muted font-mono font-medium tracking-wider block uppercase">
+              <span className="text-[9px] text-muted font-mono font-medium tracking-wider block ">
                 Generative Engine Optimization
               </span>
             </span>
@@ -110,7 +110,7 @@ export default function App() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-xs font-bold text-ink-soft hover:text-ink transition-colors font-mono uppercase tracking-widest"
+                className="text-xs font-bold text-ink-soft hover:text-ink transition-colors font-mono  tracking-widest"
                 onClick={() => setMenuOpen(false)}
               >
                 {item.label}
@@ -121,7 +121,7 @@ export default function App() {
           <div className="flex items-center gap-3 shrink-0">
             <a
               href="#live-sandbox"
-              className="hidden sm:inline-flex btn-lift items-center gap-2 rounded-xl bg-geo px-5 py-3 font-head text-xs font-semibold text-white shadow-[0_0_36px_-10px_rgba(255,59,92,0.9)] hover:bg-geo-soft"
+              className="hidden sm:inline-flex btn-lift items-center gap-2 rounded-xl bg-geo px-5 py-3 font-head text-xs font-semibold text-ink shadow-[0_0_36px_-10px_rgba(255,59,92,0.9)] hover:bg-geo-soft"
             >
               Try it free
               <ArrowRight className="w-3.5 h-3.5" />
@@ -145,7 +145,7 @@ export default function App() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="rounded-xl px-4 py-3.5 text-sm font-bold text-ink-soft hover:text-ink hover:bg-white/[0.04] font-mono uppercase tracking-widest"
+                className="rounded-xl px-4 py-3.5 text-sm font-bold text-ink-soft hover:text-ink hover:bg-white/[0.04] font-mono  tracking-widest"
               >
                 {item.label}
               </a>
@@ -153,7 +153,7 @@ export default function App() {
             <a
               href="#live-sandbox"
               onClick={() => setMenuOpen(false)}
-              className="mt-3 inline-flex items-center justify-center gap-2 rounded-xl bg-geo px-5 py-4 font-head text-sm font-semibold text-white shadow-[0_0_36px_-10px_rgba(255,59,92,0.9)]"
+              className="mt-3 inline-flex items-center justify-center gap-2 rounded-xl bg-geo px-5 py-4 font-head text-sm font-semibold text-ink shadow-[0_0_36px_-10px_rgba(255,59,92,0.9)]"
             >
               Try it free — audit your real page
               <ArrowRight className="w-4 h-4" />
@@ -176,14 +176,14 @@ export default function App() {
             <ScrollReveal direction="down" delay={0.05}>
               <div className="inline-flex items-center gap-2.5 rounded-full glass px-4 py-1.5 text-xs tracking-wide">
                 <span className="pulse-dot flex h-2 w-2 rounded-full bg-geo" />
-                <span className="font-head font-semibold uppercase tracking-[0.18em] text-ink-soft">
+                <span className="font-head font-semibold  tracking-[0.18em] text-ink-soft">
                   GEO Engine · runs on your real pages
                 </span>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
-              <h1 className="mt-7 font-display text-4xl uppercase leading-[1.05] tracking-tight md:text-6xl">
+              <h1 className="mt-7 font-display text-4xl  leading-[1.05] leading-tight md:text-6xl">
                 When AI answers,{" "}
                 <span className="text-glow-geo text-geo">cite your brand.</span>
               </h1>
@@ -215,7 +215,7 @@ export default function App() {
                 />
                 <button
                   type="submit"
-                  className="btn-lift shrink-0 inline-flex items-center gap-2 rounded-xl bg-geo px-5 py-3.5 font-head text-xs font-semibold text-white uppercase tracking-wider shadow-[0_0_32px_-10px_rgba(255,59,92,0.9)] hover:bg-geo-soft"
+                  className="btn-lift shrink-0 inline-flex items-center gap-2 rounded-xl bg-geo px-5 py-3.5 font-head text-xs font-semibold text-ink  tracking-wider shadow-[0_0_32px_-10px_rgba(255,59,92,0.9)] hover:bg-geo-soft"
                 >
                   <Search className="w-4 h-4" />
                   Get my audit
@@ -244,7 +244,7 @@ export default function App() {
                   <p className="font-display text-3xl text-glow-white md:text-4xl">
                     {s.v}
                   </p>
-                  <p className="mt-1 text-[11px] uppercase tracking-[0.2em] text-muted">
+                  <p className="mt-1 text-[11px]  tracking-[0.2em] text-muted">
                     {s.l}
                   </p>
                 </div>
@@ -261,10 +261,10 @@ export default function App() {
       <section className="border-t border-line/60 bg-abyss/40 py-14">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
-            <p className="font-head text-sm font-semibold uppercase tracking-[0.24em] text-geo">
+            <p className="font-head text-sm font-semibold  tracking-[0.24em] text-geo">
               run it on your work
             </p>
-            <h2 className="mt-2 font-display text-3xl uppercase tracking-tight md:text-4xl">
+            <h2 className="mt-2 font-display text-3xl  leading-tight md:text-4xl">
               Audit a real page, free
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-ink-soft md:text-base">
@@ -292,10 +292,10 @@ export default function App() {
       <section className="border-y border-line/60 bg-abyss py-20">
         <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <p className="text-center font-head text-sm font-semibold uppercase tracking-[0.24em] text-geo">
+            <p className="text-center font-head text-sm font-semibold  tracking-[0.24em] text-geo">
               team reports
             </p>
-            <h2 className="mx-auto mt-2 max-w-2xl text-center font-display text-3xl uppercase tracking-tight md:text-4xl">
+            <h2 className="mx-auto mt-2 max-w-2xl text-center font-display text-3xl  leading-tight md:text-4xl">
               What marketing teams do with one audit
             </h2>
           </ScrollReveal>
@@ -321,10 +321,10 @@ export default function App() {
       {/* ================= FAQ ================= */}
       <section className="mx-auto max-w-3xl px-5 py-20 sm:px-6">
         <ScrollReveal>
-          <p className="text-center font-head text-sm font-semibold uppercase tracking-[0.24em] text-geo">
+          <p className="text-center font-head text-sm font-semibold  tracking-[0.24em] text-geo">
             straight answers
           </p>
-          <h2 className="mt-2 text-center font-display text-3xl uppercase tracking-tight md:text-4xl">
+          <h2 className="mt-2 text-center font-display text-3xl  leading-tight md:text-4xl">
             Before you ask
           </h2>
         </ScrollReveal>
@@ -356,10 +356,10 @@ export default function App() {
         </div>
         <ScrollReveal>
           <div className="accent-edge panel mx-auto max-w-4xl p-8 text-center md:p-12">
-            <p className="font-head text-sm font-semibold uppercase tracking-[0.24em] text-geo">
+            <p className="font-head text-sm font-semibold  tracking-[0.24em] text-geo">
               free trial on real work
             </p>
-            <h2 className="mx-auto mt-3 max-w-2xl font-display text-3xl uppercase tracking-tight md:text-5xl">
+            <h2 className="mx-auto mt-3 max-w-2xl font-display text-3xl  leading-tight md:text-5xl">
               Find out who the AI answer engines cite — you or your competitor
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-ink-soft md:text-base">
@@ -369,7 +369,7 @@ export default function App() {
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <a
                 href="#live-sandbox"
-                className="btn-lift inline-flex items-center gap-2 rounded-xl bg-geo px-8 py-3.5 font-head font-semibold text-white shadow-[0_0_44px_-10px_rgba(255,59,92,0.9)] hover:bg-geo-soft"
+                className="btn-lift inline-flex items-center gap-2 rounded-xl bg-geo px-8 py-3.5 font-head font-semibold text-ink shadow-[0_0_44px_-10px_rgba(255,59,92,0.9)] hover:bg-geo-soft"
               >
                 Audit your page free
                 <ArrowRight className="w-4 h-4" />
@@ -386,7 +386,7 @@ export default function App() {
       </section>
 
       {/* ================= FOOTER ================= */}
-      <footer className="bg-[#04050a] text-muted py-16 border-t border-line text-[11px] font-mono relative z-10">
+      <footer className="bg-paper text-muted py-16 border-t border-line text-[11px] font-mono relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start border-b border-line/60 pb-12">
             <div className="md:col-span-5 flex flex-col gap-4">
@@ -407,7 +407,7 @@ export default function App() {
 
             <div className="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8">
               <div className="flex flex-col gap-2.5">
-                <span className="text-xs text-ink font-bold uppercase tracking-widest mb-1.5 font-head">
+                <span className="text-xs text-ink font-bold  tracking-widest mb-1.5 font-head">
                   Product
                 </span>
                 <a href="#core-pipeline" className="hover:text-ink transition-colors">
@@ -421,7 +421,7 @@ export default function App() {
                 </a>
               </div>
               <div className="flex flex-col gap-2.5">
-                <span className="text-xs text-ink font-bold uppercase tracking-widest mb-1.5 font-head">
+                <span className="text-xs text-ink font-bold  tracking-widest mb-1.5 font-head">
                   For teams
                 </span>
                 <span className="hover:text-ink transition-colors cursor-pointer">
@@ -435,7 +435,7 @@ export default function App() {
                 </span>
               </div>
               <div className="flex flex-col gap-2.5 col-span-2 sm:col-span-1">
-                <span className="text-xs text-ink font-bold uppercase tracking-widest mb-1.5 font-head">
+                <span className="text-xs text-ink font-bold  tracking-widest mb-1.5 font-head">
                   Status
                 </span>
                 <span className="flex items-center gap-1.5 text-geo font-semibold">

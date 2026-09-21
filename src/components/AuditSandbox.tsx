@@ -243,10 +243,10 @@ END HTML`);
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-geo font-mono bg-white/[0.03] border border-geo/20 px-4 py-2 rounded-full">
+          <span className="text-[10px] font-bold tracking-[0.25em]  text-geo font-mono bg-white/[0.03] border border-geo/20 px-4 py-2 rounded-full">
             REAL-TIME INTELLIGENCE
           </span>
-          <h2 className="font-display text-3xl font-extrabold text-white tracking-tight sm:text-4xl mt-6">
+          <h2 className="font-display text-3xl font-extrabold text-ink leading-tight sm:text-4xl mt-6">
             Generative Share of Voice (SOV)
           </h2>
           <p className="text-sm text-slate-400 mt-4 leading-relaxed">
@@ -263,7 +263,7 @@ END HTML`);
             <div>
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-geo animate-pulse" />
-                <h3 className="text-base font-bold text-white tracking-tight font-mono">
+                <h3 className="text-base font-bold text-ink leading-tight font-mono">
                   Live Brand Visibility Index
                 </h3>
               </div>
@@ -278,10 +278,10 @@ END HTML`);
                 <button
                   key={eng}
                   onClick={() => setSelectedEngine(eng)}
-                  className={`flex-1 sm:flex-initial px-5 py-2.5 rounded-lg text-xs font-bold font-mono transition-all uppercase tracking-widest cursor-pointer ${
+                  className={`flex-1 sm:flex-initial px-5 py-2.5 rounded-lg text-xs font-bold font-mono transition-all  tracking-widest cursor-pointer ${
                     selectedEngine === eng
                       ? "bg-gradient-to-r from-slate-100 via-geo to-geo text-slate-950 shadow-lg shadow-geo/20"
-                      : "text-slate-400 hover:text-white hover:bg-white/[0.04]"
+                      : "text-slate-400 hover:text-ink hover:bg-white/[0.04]"
                   }`}
                 >
                   {eng === "chatgpt" ? "ChatGPT" : eng === "gemini" ? "Gemini" : eng === "claude" ? "Claude" : "Perplexity"}
@@ -294,7 +294,7 @@ END HTML`);
             
             {/* Left Circular Progress Gauge */}
             <div className="md:col-span-4 flex flex-col items-center justify-center p-6 bg-white/[0.01] rounded-2xl border border-white/[0.08] text-center relative overflow-hidden">
-              <span className="text-[10px] text-slate-400 font-mono font-bold uppercase tracking-widest mb-4 block">
+              <span className="text-[10px] text-slate-400 font-mono font-bold  tracking-widest mb-4 block">
                 OVERALL SHARE OF VOICE
               </span>
               
@@ -302,7 +302,7 @@ END HTML`);
                 {/* SVG Radial Meter */}
                 <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
                   <path
-                    className="text-white/[0.06]"
+                    className="text-ink/[0.06]"
                     strokeWidth="3.2"
                     stroke="currentColor"
                     fill="none"
@@ -319,17 +319,17 @@ END HTML`);
                   />
                 </svg>
                 <div className="absolute text-center">
-                  <span className="text-4xl font-extrabold text-white font-mono leading-none block">
+                  <span className="text-4xl font-extrabold text-ink font-mono leading-none block">
                     {currentSOV.yourBrand}%
                   </span>
-                  <span className="text-[9px] text-slate-400 font-semibold block mt-1 uppercase font-mono tracking-widest">
+                  <span className="text-[9px] text-slate-400 font-semibold block mt-1  font-mono tracking-widest">
                     Visibility Score
                   </span>
                 </div>
               </div>
 
               <div className="mt-4">
-                <span className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold font-mono uppercase ${
+                <span className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-[10px] font-bold font-mono  ${
                   currentSOV.status === "optimal" 
                     ? "bg-geo/10 text-geo border border-geo/20"
                     : currentSOV.status === "warning"
@@ -346,20 +346,20 @@ END HTML`);
 
             {/* Right Horizontal Bar Chart showing Competitor details */}
             <div className="md:col-span-8 flex flex-col gap-4">
-              <h4 className="text-[10px] font-bold text-slate-500 dark:text-slate-400 font-mono uppercase tracking-wider mb-2">
+              <h4 className="text-[10px] font-bold text-slate-500 text-slate-400 font-mono  tracking-wider mb-2">
                 Comparative Brand Share mapping
               </h4>
 
               {/* Your Brand */}
               <div>
                 <div className="flex justify-between text-xs mb-1">
-                  <span className="font-semibold text-slate-900 dark:text-white flex items-center gap-2 font-mono">
+                  <span className="font-semibold text-slate-900 text-ink flex items-center gap-2 font-mono">
                     <span className="w-2.5 h-2.5 rounded-md bg-geo" />
                     Your Brand (Apex / Reference)
                   </span>
                   <span className="font-mono font-bold text-geo">{currentSOV.yourBrand}%</span>
                 </div>
-                <div className="w-full bg-slate-100 dark:bg-slate-900 h-3 rounded-md overflow-hidden border border-slate-200 dark:border-slate-800">
+                <div className="w-full bg-slate-100  h-3 rounded-md overflow-hidden border border-slate-200 ">
                   <div 
                     className="bg-geo h-full rounded-md transition-all duration-500 shadow-lg shadow-geo/20"
                     style={{ width: `${currentSOV.yourBrand}%` }}
@@ -370,15 +370,15 @@ END HTML`);
               {/* Competitor Alpha */}
               <div>
                 <div className="flex justify-between text-xs mb-1">
-                  <span className="font-semibold text-slate-500 dark:text-slate-400 flex items-center gap-2 font-mono">
-                    <span className="w-2.5 h-2.5 rounded-md bg-slate-300 dark:bg-slate-800" />
+                  <span className="font-semibold text-slate-500 text-slate-400 flex items-center gap-2 font-mono">
+                    <span className="w-2.5 h-2.5 rounded-md bg-slate-300 " />
                     Competitor Alpha
                   </span>
-                  <span className="font-mono font-bold text-slate-700 dark:text-slate-300">{currentSOV.compA}%</span>
+                  <span className="font-mono font-bold text-slate-700 text-slate-300">{currentSOV.compA}%</span>
                 </div>
-                <div className="w-full bg-slate-100 dark:bg-slate-900 h-3 rounded-md overflow-hidden border border-slate-200 dark:border-slate-800">
+                <div className="w-full bg-slate-100  h-3 rounded-md overflow-hidden border border-slate-200 ">
                   <div 
-                    className="bg-slate-400 dark:bg-slate-700 h-full rounded-md transition-all duration-500"
+                    className="bg-slate-400 bg-slate-700 h-full rounded-md transition-all duration-500"
                     style={{ width: `${currentSOV.compA}%` }}
                   />
                 </div>
@@ -387,15 +387,15 @@ END HTML`);
               {/* Competitor Beta */}
               <div>
                 <div className="flex justify-between text-xs mb-1">
-                  <span className="font-semibold text-slate-500 dark:text-slate-400 flex items-center gap-2 font-mono">
-                    <span className="w-2.5 h-2.5 rounded-md bg-slate-300 dark:bg-slate-800" />
+                  <span className="font-semibold text-slate-500 text-slate-400 flex items-center gap-2 font-mono">
+                    <span className="w-2.5 h-2.5 rounded-md bg-slate-300 " />
                     Competitor Beta
                   </span>
-                  <span className="font-mono font-bold text-slate-700 dark:text-slate-300">{currentSOV.compB}%</span>
+                  <span className="font-mono font-bold text-slate-700 text-slate-300">{currentSOV.compB}%</span>
                 </div>
-                <div className="w-full bg-slate-100 dark:bg-slate-900 h-3 rounded-md overflow-hidden border border-slate-200 dark:border-slate-800">
+                <div className="w-full bg-slate-100  h-3 rounded-md overflow-hidden border border-slate-200 ">
                   <div 
-                    className="bg-slate-400 dark:bg-slate-700 h-full rounded-md transition-all duration-500"
+                    className="bg-slate-400 bg-slate-700 h-full rounded-md transition-all duration-500"
                     style={{ width: `${currentSOV.compB}%` }}
                   />
                 </div>
@@ -404,24 +404,24 @@ END HTML`);
               {/* Competitor Gamma */}
               <div>
                 <div className="flex justify-between text-xs mb-1">
-                  <span className="font-semibold text-slate-500 dark:text-slate-400 flex items-center gap-2 font-mono">
-                    <span className="w-2.5 h-2.5 rounded-md bg-slate-300 dark:bg-slate-800" />
+                  <span className="font-semibold text-slate-500 text-slate-400 flex items-center gap-2 font-mono">
+                    <span className="w-2.5 h-2.5 rounded-md bg-slate-300 " />
                     Competitor Gamma
                   </span>
-                  <span className="font-mono font-bold text-slate-700 dark:text-slate-300">{currentSOV.compC}%</span>
+                  <span className="font-mono font-bold text-slate-700 text-slate-300">{currentSOV.compC}%</span>
                 </div>
-                <div className="w-full bg-slate-100 dark:bg-slate-900 h-3 rounded-md overflow-hidden border border-slate-200 dark:border-slate-800">
+                <div className="w-full bg-slate-100  h-3 rounded-md overflow-hidden border border-slate-200 ">
                   <div 
-                    className="bg-slate-400 dark:bg-slate-700 h-full rounded-md transition-all duration-500"
+                    className="bg-slate-400 bg-slate-700 h-full rounded-md transition-all duration-500"
                     style={{ width: `${currentSOV.compC}%` }}
                   />
                 </div>
               </div>
 
-              <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-550 dark:text-slate-400">
+              <div className="mt-4 pt-4 border-t border-slate-200  flex items-center justify-between text-[11px] font-mono text-slate-550 text-slate-400">
                 <span className="flex items-center gap-1">
-                  <AlertTriangle className="w-3.5 h-3.5 text-rose-500 dark:text-rose-400" />
-                  Blockers Detected: <strong className="text-rose-600 dark:text-rose-400">{currentSOV.blockersCount} critical</strong>
+                  <AlertTriangle className="w-3.5 h-3.5 text-rose-500 text-rose-400" />
+                  Blockers Detected: <strong className="text-rose-600 text-rose-400">{currentSOV.blockersCount} critical</strong>
                 </span>
                 <span>Last Updated: Real-time via Active Parity</span>
               </div>
@@ -434,10 +434,10 @@ END HTML`);
             PART 2: LIVE AUDIT WORKSPACE (SANDBOX)
             ========================================= */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <h3 className="font-display text-xl font-bold text-slate-900 dark:text-white tracking-tight font-mono uppercase">
+          <h3 className="font-display text-xl font-bold text-slate-900 text-ink leading-tight font-mono ">
             Interactive RAG Ingestion Sandbox
           </h3>
-          <p className="text-xs text-slate-555 dark:text-slate-400 mt-1.5">
+          <p className="text-xs text-slate-555 text-slate-400 mt-1.5">
             Evaluate any page's raw content, test optimizations, and generate deterministic outputs for the active subscription tier.
           </p>
         </div>
@@ -448,12 +448,12 @@ END HTML`);
           <div className="lg:col-span-5 flex flex-col gap-6">
             
             {/* Quick Test Samples */}
-            <div className="bg-white dark:bg-[#0b0f19]/65 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-2xl p-6 shadow-xl">
-              <h3 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-3 flex items-center gap-1.5 font-mono">
-                <Building className="w-4 h-4 text-geo dark:text-geo" />
+            <div className="bg-white bg-paper/65 backdrop-blur-md border border-slate-200  rounded-2xl p-6 shadow-xl">
+              <h3 className="text-xs font-bold text-slate-900 text-ink  tracking-wider mb-3 flex items-center gap-1.5 font-mono">
+                <Building className="w-4 h-4 text-geo text-geo" />
                 Select Pre-Populated Audit Sample
               </h3>
-              <p className="text-[11px] text-slate-500 dark:text-slate-400 mb-4 font-sans">
+              <p className="text-[11px] text-slate-500 text-slate-400 mb-4 font-sans">
                 Load typical unoptimized B2B landing pages to evaluate standard crawlability errors:
               </p>
               
@@ -464,33 +464,33 @@ END HTML`);
                     onClick={() => handleSelectSample(sample)}
                     className={`text-left p-3.5 rounded-xl border transition-all text-xs flex items-center justify-between group cursor-pointer ${
                       url === sample.url
-                        ? "bg-slate-100 dark:bg-[#111827] border-geo text-slate-900 dark:text-white font-medium ring-1 ring-geo/30"
-                        : "bg-slate-50 dark:bg-slate-900/40 border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 hover:border-slate-300 dark:hover:border-slate-700 hover:text-slate-900 dark:hover:text-slate-200"
+                        ? "bg-slate-100 bg-paper border-geo text-slate-900 text-ink font-medium ring-1 ring-geo/30"
+                        : "bg-slate-50  border-slate-200  text-slate-500 text-slate-400 hover:border-slate-300 hover: hover:text-slate-900 "
                     }`}
                   >
                     <div className="truncate pr-2">
-                      <span className="block font-semibold text-slate-800 dark:text-slate-200 group-hover:text-geo dark:group-hover:text-white truncate">
+                      <span className="block font-semibold text-slate-800 text-slate-200 group-hover:text-geo group-hover:text-ink truncate">
                         {sample.name}
                       </span>
-                      <span className="text-[10px] text-slate-400 dark:text-slate-500 block truncate mt-0.5 font-mono">
+                      <span className="text-[10px] text-slate-400 text-slate-500 block truncate mt-0.5 font-mono">
                         {sample.industry} • {sample.url.replace("https://", "")}
                       </span>
                     </div>
-                    <ChevronRight className="w-4 h-4 text-slate-400 shrink-0 group-hover:translate-x-0.5 transition-transform group-hover:text-geo dark:group-hover:text-geo" />
+                    <ChevronRight className="w-4 h-4 text-slate-400 shrink-0 group-hover:translate-x-0.5 transition-transform group-hover:text-geo group-hover:text-geo" />
                   </button>
                 ))}
               </div>
             </div>
 
             {/* Ingestion Parameters */}
-            <div className="bg-white dark:bg-[#0b0f19]/65 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-2xl p-6 shadow-xl flex flex-col gap-4">
-              <h3 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-1.5 font-mono">
-                <Globe className="w-4 h-4 text-geo dark:text-geo" />
+            <div className="bg-white bg-paper/65 backdrop-blur-md border border-slate-200  rounded-2xl p-6 shadow-xl flex flex-col gap-4">
+              <h3 className="text-xs font-bold text-slate-900 text-ink  tracking-wider flex items-center gap-1.5 font-mono">
+                <Globe className="w-4 h-4 text-geo text-geo" />
                 Live Ingestion Parameters
               </h3>
 
               <div>
-                <label className="block text-[10px] font-bold text-slate-500 dark:text-slate-400 mb-1.5 font-mono uppercase tracking-wider">
+                <label className="block text-[10px] font-bold text-slate-500 text-slate-400 mb-1.5 font-mono  tracking-wider">
                   Target Domain Reference [URL]
                 </label>
                 <div className="relative">
@@ -500,17 +500,17 @@ END HTML`);
                     value={url}
                     onChange={(e) => setUrl(e.target.value)}
                     placeholder="https://apexlogistics-example.com/services"
-                    className="w-full pl-9 pr-4 py-2.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-xs focus:outline-none focus:ring-1 focus:ring-geo/40 focus:border-geo/50 transition-all font-mono text-slate-800 dark:text-slate-200"
+                    className="w-full pl-9 pr-4 py-2.5 bg-slate-50  border border-slate-200  rounded-xl text-xs focus:outline-none focus:ring-1 focus:ring-geo/40 focus:border-geo/50 transition-all font-mono text-slate-800 text-slate-200"
                   />
                 </div>
               </div>
 
               <div>
                 <div className="flex items-center justify-between mb-1.5">
-                  <label className="block text-[10px] font-bold text-slate-500 dark:text-slate-400 font-mono uppercase tracking-wider">
+                  <label className="block text-[10px] font-bold text-slate-500 text-slate-400 font-mono  tracking-wider">
                     Raw Document Text [RAW_TEXT]
                   </label>
-                  <span className="text-[10px] text-slate-400 dark:text-slate-500 font-mono">
+                  <span className="text-[10px] text-slate-400 text-slate-500 font-mono">
                     {rawText.length} characters
                   </span>
                 </div>
@@ -518,24 +518,24 @@ END HTML`);
                   value={rawText}
                   onChange={(e) => setRawText(e.target.value)}
                   placeholder="Paste raw unformatted HTML or text dumps..."
-                  className="w-full h-52 p-3 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-mono focus:outline-none focus:ring-1 focus:ring-geo/40 focus:border-geo/50 transition-all text-slate-800 dark:text-slate-300 leading-relaxed"
+                  className="w-full h-52 p-3 bg-slate-50  border border-slate-200  rounded-xl text-xs font-mono focus:outline-none focus:ring-1 focus:ring-geo/40 focus:border-geo/50 transition-all text-slate-800 text-slate-300 leading-relaxed"
                 />
               </div>
 
               {/* Tier Selector */}
               <div>
-                <label className="block text-[10px] font-bold text-slate-500 dark:text-slate-400 mb-1.5 font-mono uppercase tracking-wider">
+                <label className="block text-[10px] font-bold text-slate-500 text-slate-400 mb-1.5 font-mono  tracking-wider">
                   Active Subscription Tier [TIER]
                 </label>
-                <div className="grid grid-cols-3 gap-2 bg-slate-100 dark:bg-slate-950/80 p-1 rounded-xl border border-slate-200 dark:border-slate-800">
+                <div className="grid grid-cols-3 gap-2 bg-slate-100  p-1 rounded-xl border border-slate-200 ">
                   {(["FREE", "STANDARD", "PRO"] as TierType[]).map((t) => (
                     <button
                       key={t}
                       onClick={() => onTierChange(t)}
                       className={`py-1.5 rounded-lg font-mono text-xs font-bold transition-all cursor-pointer ${
                         activeTier === t
-                          ? "bg-geo text-white shadow-md shadow-geo/10"
-                          : "text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/50 dark:hover:bg-slate-900"
+                          ? "bg-geo text-ink shadow-md shadow-geo/10"
+                          : "text-slate-500 text-slate-400 hover:text-slate-900 hover:text-ink hover:bg-slate-200/50 hover:"
                       }`}
                     >
                       {t}
@@ -545,8 +545,8 @@ END HTML`);
               </div>
 
               {error && (
-                <div className="bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/50 rounded-xl p-3 text-xs text-rose-700 dark:text-rose-300 flex items-start gap-2">
-                  <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5 text-rose-500 dark:text-rose-400" />
+                <div className="bg-rose-50  border border-rose-200  rounded-xl p-3 text-xs text-rose-700 text-rose-300 flex items-start gap-2">
+                  <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5 text-rose-500 text-rose-400" />
                   <span>{error}</span>
                 </div>
               )}
@@ -554,7 +554,7 @@ END HTML`);
               <button
                 onClick={handleRunAudit}
                 disabled={loading}
-                className="w-full bg-geo hover:bg-geo disabled:bg-slate-200 dark:disabled:bg-slate-800 text-white disabled:text-slate-400 dark:disabled:text-slate-500 font-mono text-xs font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-geo/10 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full bg-geo hover:bg-geo disabled:bg-slate-200 disabled: text-ink disabled:text-slate-400 disabled:text-slate-500 font-mono text-xs font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-geo/10 transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 {loading ? (
                   <>
@@ -563,7 +563,7 @@ END HTML`);
                   </>
                 ) : (
                   <>
-                    <Zap className="w-4 h-4 text-white fill-white animate-pulse" />
+                    <Zap className="w-4 h-4 text-ink fill-white animate-pulse" />
                     <span>RUN GEO EVALUATOR ({activeTier})</span>
                   </>
                 )}
@@ -582,15 +582,15 @@ END HTML`);
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="bg-white dark:bg-[#0b0f19]/45 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-2xl p-8 flex flex-col items-center justify-center text-center min-h-[520px] shadow-xl dark:shadow-2xl transition-colors"
+                  className="bg-white bg-paper/45 backdrop-blur-md border border-slate-200  rounded-2xl p-8 flex flex-col items-center justify-center text-center min-h-[520px] shadow-xl shadow-2xl transition-colors"
                 >
-                  <div className="w-14 h-14 rounded-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center mb-4">
-                    <Cpu className="w-6 h-6 text-geo dark:text-geo animate-pulse" />
+                  <div className="w-14 h-14 rounded-full bg-slate-100  border border-slate-200  flex items-center justify-center mb-4">
+                    <Cpu className="w-6 h-6 text-geo text-geo animate-pulse" />
                   </div>
-                  <h3 className="text-sm font-bold text-slate-800 dark:text-slate-200 font-mono uppercase tracking-wider">
+                  <h3 className="text-sm font-bold text-slate-800 text-slate-200 font-mono  tracking-wider">
                     Pipeline Standby Mode
                   </h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 max-w-sm mt-2 leading-relaxed font-sans">
+                  <p className="text-xs text-slate-500 text-slate-400 max-w-sm mt-2 leading-relaxed font-sans">
                     Select a sample industry or input custom HTML parameters, select your subscription tier, and initiate the audit to parse visual insights and citation recommendations.
                   </p>
                 </motion.div>
@@ -602,20 +602,20 @@ END HTML`);
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="bg-slate-50 dark:bg-[#090d16] text-slate-900 dark:text-white rounded-2xl p-8 min-h-[520px] flex flex-col items-center justify-center text-center border border-slate-200 dark:border-slate-800 shadow-xl dark:shadow-2xl transition-colors"
+                  className="bg-slate-50 bg-paper text-slate-900 text-ink rounded-2xl p-8 min-h-[520px] flex flex-col items-center justify-center text-center border border-slate-200  shadow-xl shadow-2xl transition-colors"
                 >
                   <div className="relative mb-6">
-                    <div className="w-16 h-16 rounded-full border-4 border-slate-200 dark:border-slate-800 border-t-geo animate-spin" />
-                    <Sparkle className="w-6 h-6 text-geo dark:text-geo absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 animate-pulse" />
+                    <div className="w-16 h-16 rounded-full border-4 border-slate-200  border-t-geo animate-spin" />
+                    <Sparkle className="w-6 h-6 text-geo text-geo absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 animate-pulse" />
                   </div>
-                  <span className="font-mono text-[10px] text-geo dark:text-geo uppercase tracking-widest font-bold bg-geo/10 px-3 py-1 rounded-full border border-geo/20">
+                  <span className="font-mono text-[10px] text-geo text-geo  tracking-widest font-bold bg-geo/10 px-3 py-1 rounded-full border border-geo/20">
                     PARSING SEMANTIC ENTITIES
                   </span>
-                  <h3 className="text-sm font-bold text-slate-700 dark:text-slate-200 tracking-tight mt-5 h-12 max-w-md font-mono">
+                  <h3 className="text-sm font-bold text-slate-700 text-slate-200 leading-tight mt-5 h-12 max-w-md font-mono">
                     {loadingMessage}
                   </h3>
-                  <div className="w-48 bg-slate-200 dark:bg-slate-800 h-1 rounded-full overflow-hidden mt-6">
-                    <div className="bg-geo dark:bg-geo h-full w-3/4 rounded-full animate-pulse" />
+                  <div className="w-48 bg-slate-200  h-1 rounded-full overflow-hidden mt-6">
+                    <div className="bg-geo bg-geo h-full w-3/4 rounded-full animate-pulse" />
                   </div>
                 </motion.div>
               )}
@@ -628,13 +628,13 @@ END HTML`);
                   className="flex flex-col gap-5"
                 >
                   {/* Tabs */}
-                  <div className="bg-slate-100 dark:bg-slate-950 p-1 rounded-xl border border-slate-200 dark:border-slate-800 flex gap-1 transition-colors">
+                  <div className="bg-slate-100  p-1 rounded-xl border border-slate-200  flex gap-1 transition-colors">
                     <button
                       onClick={() => setActiveTab("visual")}
-                      className={`flex-1 py-2 rounded-lg text-xs font-bold font-mono transition-all flex items-center justify-center gap-1.5 uppercase cursor-pointer ${
+                      className={`flex-1 py-2 rounded-lg text-xs font-bold font-mono transition-all flex items-center justify-center gap-1.5  cursor-pointer ${
                         activeTab === "visual"
-                          ? "bg-geo text-white shadow-md shadow-geo/10"
-                          : "text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200"
+                          ? "bg-geo text-ink shadow-md shadow-geo/10"
+                          : "text-slate-500 text-slate-400 hover:text-slate-900 "
                       }`}
                     >
                       <Activity className="w-3.5 h-3.5" />
@@ -642,10 +642,10 @@ END HTML`);
                     </button>
                     <button
                       onClick={() => setActiveTab("markdown")}
-                      className={`flex-1 py-2 rounded-lg text-xs font-bold font-mono transition-all flex items-center justify-center gap-1.5 uppercase cursor-pointer ${
+                      className={`flex-1 py-2 rounded-lg text-xs font-bold font-mono transition-all flex items-center justify-center gap-1.5  cursor-pointer ${
                         activeTab === "markdown"
-                          ? "bg-geo text-white shadow-md shadow-geo/10"
-                          : "text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200"
+                          ? "bg-geo text-ink shadow-md shadow-geo/10"
+                          : "text-slate-500 text-slate-400 hover:text-slate-900 "
                       }`}
                     >
                       <FileText className="w-3.5 h-3.5" />
@@ -654,18 +654,18 @@ END HTML`);
                   </div>
 
                   {/* Tab Contents */}
-                  <div className="bg-white dark:bg-[#0b0f19]/80 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 rounded-2xl p-6 md:p-8 min-h-[440px] shadow-xl dark:shadow-2xl">
+                  <div className="bg-white bg-paper/80 backdrop-blur-md border border-slate-200  rounded-2xl p-6 md:p-8 min-h-[440px] shadow-xl shadow-2xl">
                     
                     {activeTab === "markdown" ? (
                       /* Strict Markdown tab */
                       <div className="flex flex-col gap-4">
-                        <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-850 pb-3">
-                          <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 font-mono uppercase tracking-wider">
+                        <div className="flex items-center justify-between border-b border-slate-200  pb-3">
+                          <span className="text-[10px] font-bold text-slate-500 text-slate-400 font-mono  tracking-wider">
                             STRICT LAYOUT MARKDOWN
                           </span>
                           <button
                             onClick={() => handleCopy(result.markdownOutput)}
-                            className="bg-slate-50 hover:bg-slate-100 dark:bg-slate-900 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 px-3 py-1.5 rounded-lg text-xs font-mono font-medium flex items-center gap-1.5 border border-slate-200 dark:border-slate-850 transition-colors cursor-pointer"
+                            className="bg-slate-50 hover:bg-slate-100  hover: text-slate-700 text-slate-200 px-3 py-1.5 rounded-lg text-xs font-mono font-medium flex items-center gap-1.5 border border-slate-200  transition-colors cursor-pointer"
                           >
                             {copiedText ? (
                               <>
@@ -674,14 +674,14 @@ END HTML`);
                               </>
                             ) : (
                               <>
-                                <Copy className="w-3.5 h-3.5 text-slate-400 dark:text-slate-500" />
+                                <Copy className="w-3.5 h-3.5 text-slate-400 text-slate-500" />
                                 <span>Copy Markdown</span>
                               </>
                             )}
                           </button>
                         </div>
 
-                        <div className="markdown-body select-text text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-sans prose prose-invert max-h-[500px] overflow-y-auto pr-2">
+                        <div className="markdown-body select-text text-sm text-slate-700 text-slate-300 leading-relaxed font-sans prose prose-invert max-h-[500px] overflow-y-auto pr-2">
                           <ReactMarkdown>{result.markdownOutput}</ReactMarkdown>
                         </div>
                       </div>
@@ -693,15 +693,15 @@ END HTML`);
                         {activeTier === "FREE" && result.parsedData.free && (
                           <div className="flex flex-col gap-6">
                             
-                            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center border-b border-slate-200 dark:border-slate-800 pb-6">
-                              <div className="md:col-span-4 flex flex-col items-center text-center p-4 bg-slate-50 dark:bg-slate-900/40 rounded-2xl border border-slate-200 dark:border-slate-800">
-                                <span className="text-[9px] text-slate-500 dark:text-slate-400 font-mono font-bold uppercase block tracking-wider mb-2">
+                            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center border-b border-slate-200  pb-6">
+                              <div className="md:col-span-4 flex flex-col items-center text-center p-4 bg-slate-50  rounded-2xl border border-slate-200 ">
+                                <span className="text-[9px] text-slate-500 text-slate-400 font-mono font-bold  block tracking-wider mb-2">
                                   GEO READINESS
                                 </span>
                                 <div className="relative w-24 h-24 flex items-center justify-center">
                                   <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
                                     <path
-                                      className="text-slate-200 dark:text-slate-800"
+                                      className="text-slate-200 text-slate-800"
                                       strokeWidth="3.2"
                                       stroke="currentColor"
                                       fill="none"
@@ -718,10 +718,10 @@ END HTML`);
                                     />
                                   </svg>
                                   <div className="absolute text-center">
-                                    <span className="text-2xl font-extrabold text-slate-900 dark:text-white font-mono leading-none block">
+                                    <span className="text-2xl font-extrabold text-slate-900 text-ink font-mono leading-none block">
                                       {result.parsedData.free.score}
                                     </span>
-                                    <span className="text-[9px] text-slate-550 dark:text-slate-400 font-semibold block mt-0.5 font-mono">
+                                    <span className="text-[9px] text-slate-550 text-slate-400 font-semibold block mt-0.5 font-mono">
                                       /10
                                     </span>
                                   </div>
@@ -729,51 +729,51 @@ END HTML`);
                               </div>
 
                               <div className="md:col-span-8 flex flex-col gap-4">
-                                <h4 className="text-[10px] font-bold text-slate-550 dark:text-slate-400 font-mono uppercase tracking-wider">
+                                <h4 className="text-[10px] font-bold text-slate-550 text-slate-400 font-mono  tracking-wider">
                                   CRAWLABILITY VECTOR STANDARDS
                                 </h4>                                <div>
-                                  <div className="flex justify-between text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                                  <div className="flex justify-between text-xs font-semibold text-slate-700 text-slate-300 mb-1">
                                     <span className="flex items-center gap-1.5 font-mono">
-                                      <Database className="w-3.5 h-3.5 text-geo dark:text-geo" />
+                                      <Database className="w-3.5 h-3.5 text-geo text-geo" />
                                       Information Density Ratio
                                     </span>
-                                    <span className="font-mono text-geo dark:text-geo">{result.parsedData.free.metrics.informationDensity}/10</span>
+                                    <span className="font-mono text-geo text-geo">{result.parsedData.free.metrics.informationDensity}/10</span>
                                   </div>
-                                  <div className="w-full bg-slate-100 dark:bg-slate-900 h-1.5 rounded-full overflow-hidden border border-slate-200 dark:border-slate-850">
+                                  <div className="w-full bg-slate-100  h-1.5 rounded-full overflow-hidden border border-slate-200 ">
                                     <div 
-                                      className="bg-geo dark:bg-geo h-full rounded-full transition-all"
+                                      className="bg-geo bg-geo h-full rounded-full transition-all"
                                       style={{ width: `${result.parsedData.free.metrics.informationDensity * 10}%` }}
                                     />
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div className="flex justify-between text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                                  <div className="flex justify-between text-xs font-semibold text-slate-700 text-slate-300 mb-1">
                                     <span className="flex items-center gap-1.5 font-mono">
-                                      <TrendingUp className="w-3.5 h-3.5 text-geo dark:text-geo" />
+                                      <TrendingUp className="w-3.5 h-3.5 text-geo text-geo" />
                                       Scannable Formatted Layout
                                     </span>
-                                    <span className="font-mono text-geo dark:text-geo">{result.parsedData.free.metrics.formattedScannability}/10</span>
+                                    <span className="font-mono text-geo text-geo">{result.parsedData.free.metrics.formattedScannability}/10</span>
                                   </div>
-                                  <div className="w-full bg-slate-100 dark:bg-slate-900 h-1.5 rounded-full overflow-hidden border border-slate-200 dark:border-slate-850">
+                                  <div className="w-full bg-slate-100  h-1.5 rounded-full overflow-hidden border border-slate-200 ">
                                     <div 
-                                      className="bg-geo dark:bg-geo h-full rounded-full transition-all"
+                                      className="bg-geo bg-geo h-full rounded-full transition-all"
                                       style={{ width: `${result.parsedData.free.metrics.formattedScannability * 10}%` }}
                                     />
                                   </div>
                                 </div>
 
                                 <div>
-                                  <div className="flex justify-between text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                                  <div className="flex justify-between text-xs font-semibold text-slate-700 text-slate-300 mb-1">
                                     <span className="flex items-center gap-1.5 font-mono">
-                                      <Globe className="w-3.5 h-3.5 text-geo dark:text-geo" />
+                                      <Globe className="w-3.5 h-3.5 text-geo text-geo" />
                                       Named Entity Co-Occurrence
                                     </span>
-                                    <span className="font-mono text-geo dark:text-geo">{result.parsedData.free.metrics.entityMapping}/10</span>
+                                    <span className="font-mono text-geo text-geo">{result.parsedData.free.metrics.entityMapping}/10</span>
                                   </div>
-                                  <div className="w-full bg-slate-100 dark:bg-slate-900 h-1.5 rounded-full overflow-hidden border border-slate-200 dark:border-slate-850">
+                                  <div className="w-full bg-slate-100  h-1.5 rounded-full overflow-hidden border border-slate-200 ">
                                     <div 
-                                      className="bg-geo dark:bg-geo h-full rounded-full transition-all"
+                                      className="bg-geo bg-geo h-full rounded-full transition-all"
                                       style={{ width: `${result.parsedData.free.metrics.entityMapping * 10}%` }}
                                     />
                                   </div>
@@ -782,17 +782,17 @@ END HTML`);
                             </div>
 
                             <div>
-                              <h4 className="text-[10px] font-bold text-slate-500 dark:text-slate-400 font-mono uppercase tracking-wider mb-3 flex items-center gap-1.5">
-                                <AlertTriangle className="w-4 h-4 text-rose-500 dark:text-rose-400 animate-pulse" />
+                              <h4 className="text-[10px] font-bold text-slate-500 text-slate-400 font-mono  tracking-wider mb-3 flex items-center gap-1.5">
+                                <AlertTriangle className="w-4 h-4 text-rose-500 text-rose-400 animate-pulse" />
                                 Critical Crawler & Indexing Blockers
                               </h4>
                               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                 {result.parsedData.free.blockers.map((blk, idx) => (
-                                  <div key={idx} className="bg-rose-500/[0.04] dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/40 rounded-xl p-4 transition-colors">
-                                    <span className="text-[11px] font-bold text-rose-750 dark:text-rose-300 flex items-center gap-1 font-mono uppercase tracking-wide">
+                                  <div key={idx} className="bg-rose-500/[0.04]  border border-rose-200  rounded-xl p-4 transition-colors">
+                                    <span className="text-[11px] font-bold text-rose-750 text-rose-300 flex items-center gap-1 font-mono  tracking-wide">
                                       {blk.title}
                                     </span>
-                                    <p className="text-[11px] text-rose-600/90 dark:text-rose-400/90 leading-normal mt-1.5">
+                                    <p className="text-[11px] text-rose-600/90 text-rose-400/90 leading-normal mt-1.5">
                                       {blk.description}
                                     </p>
                                   </div>
@@ -808,36 +808,36 @@ END HTML`);
                           <div className="flex flex-col gap-6">
                             
                             <div>
-                              <h4 className="text-[10px] font-bold text-slate-500 dark:text-slate-400 font-mono uppercase tracking-wider mb-3 flex items-center gap-1.5">
-                                <Layers className="w-4 h-4 text-geo dark:text-geo" />
+                              <h4 className="text-[10px] font-bold text-slate-500 text-slate-400 font-mono  tracking-wider mb-3 flex items-center gap-1.5">
+                                <Layers className="w-4 h-4 text-geo text-geo" />
                                 Narrative Contrast Audit
                               </h4>
                               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div className="bg-rose-500/[0.03] dark:bg-rose-950/20 border border-rose-200 dark:border-rose-900/30 rounded-xl p-5 flex flex-col justify-between transition-colors">
+                                <div className="bg-rose-500/[0.03]  border border-rose-200  rounded-xl p-5 flex flex-col justify-between transition-colors">
                                   <div>
-                                    <span className="text-[10px] font-mono font-bold text-rose-600 dark:text-rose-400 uppercase tracking-wide bg-rose-500/10 px-2 py-0.5 rounded border border-rose-500/20">
+                                    <span className="text-[10px] font-mono font-bold text-rose-600 text-rose-400  tracking-wide bg-rose-500/10 px-2 py-0.5 rounded border border-rose-500/20">
                                       Unoptimized Element
                                     </span>
-                                    <p className="text-xs text-rose-900 dark:text-rose-200 font-serif italic mt-3 leading-relaxed">
+                                    <p className="text-xs text-rose-900 text-rose-200 font-serif italic mt-3 leading-relaxed">
                                       "{result.parsedData.standard.unoptimizedSegment}"
                                     </p>
                                   </div>
-                                  <span className="text-[9px] text-rose-600/80 dark:text-rose-400/80 font-mono mt-4 pt-3 border-t border-rose-100 dark:border-rose-900/30">
+                                  <span className="text-[9px] text-rose-600/80 text-rose-400/80 font-mono mt-4 pt-3 border-t border-rose-100 ">
                                     ▲ Low informational volume triggers low retrieval probability.
                                   </span>
                                 </div>
 
-                                <div className="bg-emerald-500/[0.03] dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900/30 rounded-xl p-5 flex flex-col justify-between transition-colors">
+                                <div className="bg-emerald-500/[0.03]  border border-emerald-200  rounded-xl p-5 flex flex-col justify-between transition-colors">
                                   <div>
-                                    <span className="text-[10px] font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wide bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                                    <span className="text-[10px] font-mono font-bold text-emerald-600 text-emerald-400  tracking-wide bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
                                       Engineered Alternative
                                     </span>
-                                    <p className="text-xs text-emerald-900 dark:text-emerald-200 font-medium mt-3 leading-relaxed">
+                                    <p className="text-xs text-emerald-900 text-emerald-200 font-medium mt-3 leading-relaxed">
                                       {result.parsedData.standard.optimizedAlternative}
                                     </p>
                                   </div>
-                                  <span className="text-[9px] text-emerald-600 dark:text-emerald-400 font-mono mt-4 pt-3 border-t border-emerald-100 dark:border-emerald-900/30 flex items-center gap-1">
-                                    <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                                  <span className="text-[9px] text-emerald-600 text-emerald-400 font-mono mt-4 pt-3 border-t border-emerald-100  flex items-center gap-1">
+                                    <Check className="w-3.5 h-3.5 text-emerald-600 text-emerald-400" />
                                     Frontloaded semantic properties & citation hooks.
                                   </span>
                                 </div>
@@ -845,21 +845,21 @@ END HTML`);
                             </div>
 
                             <div>
-                              <h4 className="text-[10px] font-bold text-slate-550 dark:text-slate-400 font-mono uppercase tracking-wider mb-3 flex items-center gap-1.5">
-                                <MessageSquare className="w-4 h-4 text-geo dark:text-geo" />
+                              <h4 className="text-[10px] font-bold text-slate-550 text-slate-400 font-mono  tracking-wider mb-3 flex items-center gap-1.5">
+                                <MessageSquare className="w-4 h-4 text-geo text-geo" />
                                 AI-Agent Q&A Formulation Models
                               </h4>
                               <div className="flex flex-col gap-3">
                                 {result.parsedData.standard.qaBlocks.map((blk, idx) => (
-                                  <div key={idx} className="bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 rounded-xl p-4 transition-colors">
-                                    <span className="text-[11px] font-bold text-slate-800 dark:text-slate-200 font-mono flex items-center gap-2 mb-2">
-                                      <span className="w-5 h-5 rounded-full bg-geo/10 text-geo dark:text-geo text-[10px] font-bold flex items-center justify-center border border-geo/20 font-mono">
+                                  <div key={idx} className="bg-slate-50  border border-slate-200  rounded-xl p-4 transition-colors">
+                                    <span className="text-[11px] font-bold text-slate-800 text-slate-200 font-mono flex items-center gap-2 mb-2">
+                                      <span className="w-5 h-5 rounded-full bg-geo/10 text-geo text-geo text-[10px] font-bold flex items-center justify-center border border-geo/20 font-mono">
                                         Q
                                       </span>
                                       {blk.query}
                                     </span>
-                                    <div className="bg-white dark:bg-slate-950/55 border border-slate-200 dark:border-slate-850 rounded-lg p-3 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
-                                      <strong className="text-slate-700 dark:text-slate-200 font-bold">Citation Target:</strong> {blk.formulation}
+                                    <div className="bg-white  border border-slate-200  rounded-lg p-3 text-xs leading-relaxed text-slate-500 text-slate-400">
+                                      <strong className="text-slate-700 text-slate-200 font-bold">Citation Target:</strong> {blk.formulation}
                                     </div>
                                   </div>
                                 ))}
@@ -873,34 +873,34 @@ END HTML`);
                         {activeTier === "PRO" && result.parsedData.pro && (
                           <div className="flex flex-col gap-6">
                             
-                            <div className="bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 rounded-xl p-5 flex flex-col gap-4 transition-colors">
-                              <div className="flex justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+                            <div className="bg-slate-50  border border-slate-200  rounded-xl p-5 flex flex-col gap-4 transition-colors">
+                              <div className="flex justify-between border-b border-slate-200  pb-3">
                                 <div>
-                                  <span className="text-[9px] font-bold text-slate-500 dark:text-slate-400 font-mono uppercase block">
+                                  <span className="text-[9px] font-bold text-slate-500 text-slate-400 font-mono  block">
                                     PRIMARY ENTITY CLASSIFIER
                                   </span>
-                                  <span className="text-xs font-bold text-geo dark:text-geo font-mono">
+                                  <span className="text-xs font-bold text-geo text-geo font-mono">
                                     @type: "{result.parsedData.pro.primaryType}"
                                   </span>
                                 </div>
                                 <div className="text-right">
-                                  <span className="text-[9px] font-bold text-slate-500 dark:text-slate-400 font-mono uppercase block">
+                                  <span className="text-[9px] font-bold text-slate-500 text-slate-400 font-mono  block">
                                     RESOLVED REFERENCE DOMAIN
                                   </span>
-                                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300 font-mono">
+                                  <span className="text-xs font-bold text-slate-700 text-slate-300 font-mono">
                                     {result.parsedData.pro.targetDomain}
                                   </span>
                                 </div>
                               </div>
 
                               <div>
-                                <span className="text-[9px] font-bold text-slate-500 dark:text-slate-400 font-mono uppercase block mb-2 tracking-wider">
+                                <span className="text-[9px] font-bold text-slate-500 text-slate-400 font-mono  block mb-2 tracking-wider">
                                   Linked Knowledge Graph Association Nodes
                                 </span>
                                 <div className="flex flex-wrap gap-2">
                                   {result.parsedData.pro.childNodes.map((node, idx) => (
-                                    <span key={idx} className="bg-white dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-md px-2.5 py-1 text-xs text-slate-600 dark:text-slate-300 font-mono font-medium flex items-center gap-1.5 shadow-sm transition-colors">
-                                      <span className="w-1.5 h-1.5 rounded-full bg-geo dark:bg-geo animate-pulse" />
+                                    <span key={idx} className="bg-white  border border-slate-200  rounded-md px-2.5 py-1 text-xs text-slate-600 text-slate-300 font-mono font-medium flex items-center gap-1.5 shadow-sm transition-colors">
+                                      <span className="w-1.5 h-1.5 rounded-full bg-geo bg-geo animate-pulse" />
                                       {node}
                                     </span>
                                   ))}
@@ -910,19 +910,19 @@ END HTML`);
 
                             <div>
                               <div className="flex items-center justify-between mb-2">
-                                <h4 className="text-[10px] font-bold text-slate-500 dark:text-slate-400 font-mono uppercase tracking-wider flex items-center gap-1.5">
-                                  <Code className="w-4 h-4 text-geo dark:text-geo" />
+                                <h4 className="text-[10px] font-bold text-slate-500 text-slate-400 font-mono  tracking-wider flex items-center gap-1.5">
+                                  <Code className="w-4 h-4 text-geo text-geo" />
                                   JSON-LD Web Integration Schema
                                 </h4>
                                 <button
                                   onClick={() => handleCopy(result.parsedData.pro!.jsonLd)}
-                                  className="text-[10px] text-geo hover:text-geo dark:text-geo dark:hover:text-geo font-mono font-bold flex items-center gap-1 cursor-pointer"
+                                  className="text-[10px] text-geo hover:text-geo text-geo hover:text-geo font-mono font-bold flex items-center gap-1 cursor-pointer"
                                 >
                                   {copiedText ? <Check className="w-3 h-3 text-emerald-500" /> : <Copy className="w-3 h-3" />}
                                   {copiedText ? "Copied" : "Copy Schema"}
                                 </button>
                               </div>
-                              <pre className="p-4 bg-slate-50 dark:bg-slate-950 text-slate-700 dark:text-slate-300 rounded-xl text-[10px] font-mono overflow-x-auto max-h-72 border border-slate-200 dark:border-slate-800 leading-relaxed scrollbar-thin scrollbar-thumb-slate-800 scrollbar-track-slate-900 select-text transition-colors">
+                              <pre className="p-4 bg-slate-50  text-slate-700 text-slate-300 rounded-xl text-[10px] font-mono overflow-x-auto max-h-72 border border-slate-200  leading-relaxed scrollbar-thin scrollbar-thumb-slate-800 scrollbar-track-slate-900 select-text transition-colors">
                                 {result.parsedData.pro.jsonLd}
                               </pre>
                             </div>
@@ -937,17 +937,17 @@ END HTML`);
                           if (activeTier === "PRO" && !result.parsedData.pro) return true;
                           return false;
                         })() && (
-                          <div className="bg-amber-500/[0.04] dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/30 rounded-xl p-6 flex flex-col items-start gap-3 transition-colors">
-                            <span className="text-[10px] font-mono font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wide flex items-center gap-1.5">
+                          <div className="bg-amber-500/[0.04]  border border-amber-200  rounded-xl p-6 flex flex-col items-start gap-3 transition-colors">
+                            <span className="text-[10px] font-mono font-bold text-amber-600 text-amber-400  tracking-wide flex items-center gap-1.5">
                               <AlertTriangle className="w-4 h-4" />
                               Tier Mismatch Detected
                             </span>
-                            <p className="text-xs text-amber-900 dark:text-amber-200 leading-relaxed">
+                            <p className="text-xs text-amber-900 text-amber-200 leading-relaxed">
                               This output was generated under the <strong className="font-mono">{result.tier}</strong> tier. Switch the tier selector to <strong className="font-mono">{activeTier}</strong> and re-run the audit to render its visualization.
                             </p>
                             <button
                               onClick={handleRunAudit}
-                              className="mt-1 bg-amber-500 hover:bg-amber-600 text-white font-mono text-[10px] font-bold py-2.5 px-4 rounded-lg uppercase tracking-widest transition-colors cursor-pointer"
+                              className="mt-1 bg-amber-500 hover:bg-amber-600 text-ink font-mono text-[10px] font-bold py-2.5 px-4 rounded-lg  tracking-widest transition-colors cursor-pointer"
                             >
                               Re-run as {activeTier}
                             </button>

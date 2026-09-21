@@ -46,10 +46,10 @@ export default function EngineeringTeam() {
         {/* Section Header */}
         <ScrollReveal direction="up">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-geo font-mono bg-white/[0.03] border border-geo/20 px-4 py-2 rounded-full">
+            <span className="text-[10px] font-bold tracking-[0.25em]  text-geo font-mono bg-white/[0.03] border border-geo/20 px-4 py-2 rounded-full">
               R&D FOUNDRY
             </span>
-            <h2 className="font-display text-3xl font-extrabold text-white tracking-tight mt-6 sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold text-ink leading-tight mt-6 sm:text-4xl">
               Heuristic Engine Architects
             </h2>
             <p className="text-sm text-slate-400 mt-4 leading-relaxed">
@@ -94,7 +94,7 @@ export default function EngineeringTeam() {
                     </div>
 
                     {/* Name */}
-                    <h3 className="text-sm font-bold text-white tracking-tight group-hover:text-geo transition-colors font-display">
+                    <h3 className="text-sm font-bold text-ink leading-tight group-hover:text-geo transition-colors font-display">
                       {profile.name}
                     </h3>
                     
@@ -110,7 +110,7 @@ export default function EngineeringTeam() {
                   </div>
 
                   {/* Verified Badge */}
-                  <div className="mt-6 flex items-center gap-1.5 text-[10px] text-slate-500 font-mono font-bold uppercase tracking-widest">
+                  <div className="mt-6 flex items-center gap-1.5 text-[10px] text-slate-500 font-mono font-bold  tracking-widest">
                     <Cpu className="w-3.5 h-3.5 text-geo/60" />
                     Verified Committer
                   </div>

@@ -83,8 +83,8 @@ export default function CustomCursor() {
           x: cursorXSpring,
           y: cursorYSpring,
           scale: isHoveringInteractive ? 1.4 : 1,
-          borderColor: hoverData ? "rgba(255, 59, 92, 0.7)" : "rgba(255, 116, 128, 0.4)",
-          backgroundColor: hoverData ? "rgba(255, 59, 92, 0.05)" : "rgba(255, 116, 128, 0.02)",
+          borderColor: hoverData ? "rgba(179, 49, 34, 0.6)" : "rgba(179, 49, 34, 0.35)",
+          backgroundColor: hoverData ? "rgba(179, 49, 34, 0.05)" : "rgba(179, 49, 34, 0.02)",
         }}
         transition={{ type: "spring", stiffness: 350, damping: 25 }}
       />
@@ -95,10 +95,10 @@ export default function CustomCursor() {
         style={{
           x: cursorXSpring,
           y: cursorYSpring,
-          backgroundColor: hoverData ? "#FF3B5C" : "#FF7480",
+          backgroundColor: hoverData ? "#b33122" : "#d4553f",
           boxShadow: hoverData 
-            ? "0 0 12px rgba(255, 59, 92, 0.9)" 
-            : "0 0 10px rgba(255, 116, 128, 0.8)",
+            ? "0 0 12px rgba(179, 49, 34, 0.4)" 
+            : "0 0 10px rgba(179, 49, 34, 0.3)",
         }}
       />
 
@@ -115,7 +115,7 @@ export default function CustomCursor() {
           exit={{ opacity: 0, scale: 0.92, y: 15 }}
           transition={{ duration: 0.2, ease: "easeOut" }}
         >
-          <div className="bg-[#040812]/95 backdrop-blur-xl border border-geo/20 rounded-xl p-4 shadow-[0_20px_50px_rgba(0,0,0,0.8)] relative overflow-hidden">
+          <div className="bg-paper/95 backdrop-blur-xl border border-geo/20 rounded-xl p-4 shadow-[0_20px_50px_rgba(28,25,23,0.18)] relative overflow-hidden">
             {/* Top scanning lines effect */}
             <div className="absolute inset-0 pixis-grid-lines opacity-10 pointer-events-none"></div>
             
@@ -123,13 +123,13 @@ export default function CustomCursor() {
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-slate-200 via-geo to-geo"></div>
 
             {hoverData.action && (
-              <span className="text-[8px] font-mono text-geo font-extrabold uppercase tracking-[0.2em] block mb-1.5">
+              <span className="text-[8px] font-mono text-geo font-extrabold  tracking-[0.2em] block mb-1.5">
                 // {hoverData.action}
               </span>
             )}
             
             {hoverData.title && (
-              <h4 className="text-[11px] font-bold text-white font-mono tracking-wide leading-tight">
+              <h4 className="text-[11px] font-bold text-ink font-mono tracking-wide leading-tight">
                 {hoverData.title}
               </h4>
             )}
@@ -141,7 +141,7 @@ export default function CustomCursor() {
             )}
 
             {/* Micro-tech scan line detail */}
-            <div className="mt-3 pt-2.5 border-t border-white/[0.04] flex items-center justify-between text-[8px] font-mono text-slate-400">
+            <div className="mt-3 pt-2.5 border-t border-line flex items-center justify-between text-[8px] font-mono text-slate-400">
               <span>SCANNING PARITY...</span>
               <span className="text-geo">/// STABLE</span>
             </div>

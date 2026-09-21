@@ -51,10 +51,10 @@ export default function CoreSequence() {
         {/* Section Header */}
         <ScrollReveal direction="up">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-geo font-mono bg-white/[0.03] border border-geo/20 px-4 py-2 rounded-full">
+            <span className="text-[10px] font-bold tracking-[0.25em]  text-geo font-mono bg-white/[0.03] border border-geo/20 px-4 py-2 rounded-full">
               OPTIMIZATION CYCLE
             </span>
-            <h2 className="font-display text-3xl font-extrabold text-white tracking-tight mt-6 sm:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold text-ink leading-tight mt-6 sm:text-4xl">
               The GEO Core Pipeline
             </h2>
             <p className="text-sm text-slate-400 mt-4 leading-relaxed">
@@ -117,7 +117,7 @@ export default function CoreSequence() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-sm font-bold text-white tracking-tight mb-3 group-hover:text-geo transition-colors font-display">
+                  <h3 className="text-sm font-bold text-ink leading-tight mb-3 group-hover:text-geo transition-colors font-display">
                     {step.title}
                   </h3>
 
@@ -143,10 +143,10 @@ export default function CoreSequence() {
             <div className="flex items-center gap-3">
               <Zap className="w-4 h-4 text-geo animate-pulse shrink-0" />
               <p className="text-xs text-slate-400 font-mono">
-                <strong className="text-white">Real-Time Synchronization:</strong> The ingestion parser automatically triggers upon updates across Cloud Storage or API hooks.
+                <strong className="text-ink">Real-Time Synchronization:</strong> The ingestion parser automatically triggers upon updates across Cloud Storage or API hooks.
               </p>
             </div>
-            <span className="text-[10px] font-bold font-mono text-geo bg-geo/10 px-3 py-1.5 rounded-lg border border-geo/20 uppercase tracking-wider flex items-center gap-2">
+            <span className="text-[10px] font-bold font-mono text-geo bg-geo/10 px-3 py-1.5 rounded-lg border border-geo/20  tracking-wider flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-geo animate-pulse"></span>
               System Status: Connected
             </span>

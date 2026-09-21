@@ -13,7 +13,7 @@ export default function CitationDiagram() {
       >
         <div className="absolute inset-0 pixis-grid-lines opacity-[0.12] pointer-events-none"></div>
         
-        <h3 className="text-sm font-semibold text-white mb-4 flex items-center gap-2 relative z-10 font-mono tracking-wide">
+        <h3 className="text-sm font-semibold text-ink mb-4 flex items-center gap-2 relative z-10 font-mono tracking-wide">
           <Cpu className="w-4 h-4 text-geo" />
           Generative Engine Optimization (GEO) & RAG Pipeline Architecture
         </h3>
@@ -34,7 +34,7 @@ export default function CitationDiagram() {
             <div className="w-10 h-10 rounded-full bg-white/[0.03] flex items-center justify-center text-slate-300 font-mono text-xs font-bold mb-3 border border-white/[0.08]">
               01
             </div>
-            <span className="text-xs font-semibold text-white mb-1">Raw Content Ingestion</span>
+            <span className="text-xs font-semibold text-ink mb-1">Raw Content Ingestion</span>
             <p className="text-[11px] text-slate-400 leading-normal">
               Web crawler extracts HTML textual dump. Evaluates scannability and structural metadata.
             </p>
@@ -55,7 +55,7 @@ export default function CitationDiagram() {
             <div className="w-10 h-10 rounded-full bg-geo/10 flex items-center justify-center text-geo font-mono text-xs font-bold mb-3 border border-geo/20">
               02
             </div>
-            <span className="text-xs font-semibold text-white mb-1">Knowledge Graph Mapping</span>
+            <span className="text-xs font-semibold text-ink mb-1">Knowledge Graph Mapping</span>
             <p className="text-[11px] text-slate-400 leading-normal">
               Entity extraction establishes hard data boundaries, replacing vague pronouns with structured parameters.
             </p>
@@ -76,7 +76,7 @@ export default function CitationDiagram() {
             <div className="w-10 h-10 rounded-full bg-geo/10 flex items-center justify-center text-geo font-mono text-xs font-bold mb-3 border border-geo/20">
               03
             </div>
-            <span className="text-xs font-semibold text-white mb-1">LLM Response Generation</span>
+            <span className="text-xs font-semibold text-ink mb-1">LLM Response Generation</span>
             <p className="text-[11px] text-slate-400 leading-normal">
               High density text is matched in vector index and cited directly as source links in user queries.
             </p>
