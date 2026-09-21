@@ -43,7 +43,7 @@ const steps: Step[] = [
 
 export default function CoreSequence() {
   return (
-    <section className="py-24 bg-[#02040a] border-y border-white/[0.08] relative overflow-hidden" id="core-pipeline">
+    <section className="py-24 bg-void border-y border-white/[0.08] relative overflow-hidden" id="core-pipeline">
       <div className="absolute inset-0 pixis-grid-lines opacity-20"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -51,7 +51,7 @@ export default function CoreSequence() {
         {/* Section Header */}
         <ScrollReveal direction="up">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-sky-400 font-mono bg-white/[0.03] border border-sky-500/20 px-4 py-2 rounded-full">
+            <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-geo font-mono bg-white/[0.03] border border-geo/20 px-4 py-2 rounded-full">
               OPTIMIZATION CYCLE
             </span>
             <h2 className="font-display text-3xl font-extrabold text-white tracking-tight mt-6 sm:text-4xl">
@@ -91,8 +91,8 @@ export default function CoreSequence() {
                 
                 {/* Connector Line (Desktop Only) */}
                 {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-12 left-[85%] right-[-15%] h-[1px] bg-gradient-to-r from-sky-500/30 to-transparent z-0">
-                    <div className="absolute right-0 top-1/2 -translate-y-1/2 text-sky-400/60">
+                  <div className="hidden md:block absolute top-12 left-[85%] right-[-15%] h-[1px] bg-gradient-to-r from-geo/30 to-transparent z-0">
+                    <div className="absolute right-0 top-1/2 -translate-y-1/2 text-geo/60">
                       <ArrowRight className="w-4 h-4" />
                     </div>
                   </div>
@@ -100,7 +100,7 @@ export default function CoreSequence() {
 
                 {/* Card Block */}
                 <div 
-                  className="bg-white/[0.02] border border-white/[0.08] hover:border-sky-400/40 hover:bg-white/[0.04] rounded-2xl p-6 relative z-10 shadow-2xl transition-all duration-300 flex flex-col h-full group backdrop-blur-xl cursor-crosshair"
+                  className="bg-white/[0.02] border border-white/[0.08] hover:border-geo/40 hover:bg-white/[0.04] rounded-2xl p-6 relative z-10 shadow-2xl transition-all duration-300 flex flex-col h-full group backdrop-blur-xl cursor-crosshair"
                   data-cursor-title={hoverTitles[index]}
                   data-cursor-desc={hoverDescs[index]}
                   data-cursor-action="PIPELINE STAGE"
@@ -108,16 +108,16 @@ export default function CoreSequence() {
                   
                   {/* Step Top */}
                   <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-slate-300 group-hover:bg-gradient-to-tr group-hover:from-sky-500/15 group-hover:to-slate-200/10 group-hover:border-sky-500/30 group-hover:text-sky-400 transition-colors duration-300">
+                    <div className="w-12 h-12 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-slate-300 group-hover:bg-gradient-to-tr group-hover:from-geo/15 group-hover:to-slate-200/10 group-hover:border-geo/30 group-hover:text-geo transition-colors duration-300">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="font-mono text-xs font-bold text-slate-500 group-hover:text-sky-400 transition-colors">
+                    <span className="font-mono text-xs font-bold text-slate-500 group-hover:text-geo transition-colors">
                       {step.number}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-sm font-bold text-white tracking-tight mb-3 group-hover:text-sky-400 transition-colors font-display">
+                  <h3 className="text-sm font-bold text-white tracking-tight mb-3 group-hover:text-geo transition-colors font-display">
                     {step.title}
                   </h3>
 
@@ -141,13 +141,13 @@ export default function CoreSequence() {
             data-cursor-action="DAEMON SYSTEM"
           >
             <div className="flex items-center gap-3">
-              <Zap className="w-4 h-4 text-sky-400 animate-pulse shrink-0" />
+              <Zap className="w-4 h-4 text-geo animate-pulse shrink-0" />
               <p className="text-xs text-slate-400 font-mono">
                 <strong className="text-white">Real-Time Synchronization:</strong> The ingestion parser automatically triggers upon updates across Cloud Storage or API hooks.
               </p>
             </div>
-            <span className="text-[10px] font-bold font-mono text-sky-400 bg-sky-500/10 px-3 py-1.5 rounded-lg border border-sky-400/20 uppercase tracking-wider flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
+            <span className="text-[10px] font-bold font-mono text-geo bg-geo/10 px-3 py-1.5 rounded-lg border border-geo/20 uppercase tracking-wider flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-geo animate-pulse"></span>
               System Status: Connected
             </span>
           </div>

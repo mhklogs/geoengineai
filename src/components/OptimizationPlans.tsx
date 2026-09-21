@@ -10,7 +10,7 @@ interface OptimizationPlansProps {
 
 export default function OptimizationPlans({ onSelectPlan, activeTier }: OptimizationPlansProps) {
   return (
-    <section className="py-24 bg-[#02040a] border-t border-white/[0.08] relative overflow-hidden" id="pricing-matrix">
+    <section className="py-24 bg-void border-t border-white/[0.08] relative overflow-hidden" id="pricing-matrix">
       <div className="absolute inset-0 pixis-grid-lines opacity-20"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -18,7 +18,7 @@ export default function OptimizationPlans({ onSelectPlan, activeTier }: Optimiza
         {/* Section Header */}
         <ScrollReveal direction="up">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-sky-400 font-mono bg-white/[0.03] border border-sky-500/20 px-4 py-2 rounded-full">
+            <span className="text-[10px] font-bold tracking-[0.25em] uppercase text-geo font-mono bg-white/[0.03] border border-geo/20 px-4 py-2 rounded-full">
               COMMERCIAL OPTIMIZATION MATRIX
             </span>
             <h2 className="font-display text-3xl font-extrabold text-white tracking-tight mt-6 sm:text-4xl">
@@ -38,7 +38,7 @@ export default function OptimizationPlans({ onSelectPlan, activeTier }: Optimiza
             <div 
               className={`bg-white/[0.02] border rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 backdrop-blur-xl h-full cursor-pointer ${
                 activeTier === "FREE" 
-                  ? "border-sky-500/60 ring-1 ring-sky-500/30 shadow-2xl" 
+                  ? "border-geo/60 ring-1 ring-geo/30 shadow-2xl" 
                   : "border-white/[0.08] hover:border-white/[0.18]"
               }`}
               data-cursor-title="Core Visibility Tier ($499)"
@@ -65,19 +65,19 @@ export default function OptimizationPlans({ onSelectPlan, activeTier }: Optimiza
                 {/* Bullet points */}
                 <ul className="mt-8 space-y-4 text-xs text-slate-300 border-t border-white/[0.08] pt-6">
                   <li className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 text-geo shrink-0 mt-0.5" />
                     <span>Manual heuristic content recommendations</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 text-geo shrink-0 mt-0.5" />
                     <span>Single-engine citation tracking</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 text-geo shrink-0 mt-0.5" />
                     <span>Standard REST API pipeline access</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 text-geo shrink-0 mt-0.5" />
                     <span>Monthly crawlability readiness scores</span>
                   </li>
                 </ul>
@@ -101,24 +101,24 @@ export default function OptimizationPlans({ onSelectPlan, activeTier }: Optimiza
             <div 
               className={`border rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 shadow-2xl relative transform md:-translate-y-2 backdrop-blur-xl h-full cursor-pointer ${
                 activeTier === "STANDARD"
-                  ? "bg-white/[0.03] border-sky-400/80 ring-2 ring-sky-400/30"
+                  ? "bg-white/[0.03] border-geo/80 ring-2 ring-geo/30"
                   : "bg-white/[0.01] border-white/[0.08]"
               }`}
               data-cursor-title="Autonomous GEO Agent ($1,899)"
               data-cursor-desc="Programmatic semantic injection across all model updates. Highly recommended."
               data-cursor-action="SELECT PRO"
             >
-              <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-slate-100 via-sky-400 to-sky-600 text-slate-950 font-mono text-[9px] uppercase tracking-widest px-4 py-1.5 rounded-full font-bold shadow-md flex items-center gap-1.5">
+              <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-slate-100 via-geo to-geo text-slate-950 font-mono text-[9px] uppercase tracking-widest px-4 py-1.5 rounded-full font-bold shadow-md flex items-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5 text-slate-950 fill-slate-950" />
                 Engine Choice
               </div>
 
               <div className="mt-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold text-sky-400 font-mono uppercase tracking-widest">
+                  <span className="text-xs font-bold text-geo font-mono uppercase tracking-widest">
                     Autonomous GEO Agent
                   </span>
-                  <span className="text-[10px] bg-sky-400/10 text-sky-400 font-mono px-3 py-1 rounded-md border border-sky-400/20 font-bold">
+                  <span className="text-[10px] bg-geo/10 text-geo font-mono px-3 py-1 rounded-md border border-geo/20 font-bold">
                     Professional
                   </span>
                 </div>
@@ -133,23 +133,23 @@ export default function OptimizationPlans({ onSelectPlan, activeTier }: Optimiza
                 {/* Bullet points */}
                 <ul className="mt-8 space-y-4 text-xs text-slate-300 border-t border-white/[0.08] pt-6">
                   <li className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 text-geo shrink-0 mt-0.5" />
                     <span><strong>Automated real-time semantic injection</strong></span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 text-geo shrink-0 mt-0.5" />
                     <span>Multi-LLM (ChatGPT, Gemini, Claude) tracking</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 text-geo shrink-0 mt-0.5" />
                     <span>Priority programmatic integration hooks</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 text-geo shrink-0 mt-0.5" />
                     <span>Automated schema graph compilation</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 text-geo shrink-0 mt-0.5" />
                     <span>Weekly parity audits & drift prevention</span>
                   </li>
                 </ul>
@@ -159,7 +159,7 @@ export default function OptimizationPlans({ onSelectPlan, activeTier }: Optimiza
                 onClick={() => onSelectPlan("STANDARD")}
                 className={`mt-8 w-full py-3.5 px-4 rounded-xl text-xs font-mono font-bold transition-all border cursor-pointer ${
                   activeTier === "STANDARD"
-                    ? "bg-gradient-to-r from-slate-100 via-sky-400 to-sky-600 text-slate-950 border-transparent shadow-lg shadow-sky-500/20"
+                    ? "bg-gradient-to-r from-slate-100 via-geo to-geo text-slate-950 border-transparent shadow-lg shadow-geo/20"
                     : "bg-white/[0.04] hover:bg-white/[0.08] text-white border-white/[0.12]"
                 }`}
               >
@@ -173,7 +173,7 @@ export default function OptimizationPlans({ onSelectPlan, activeTier }: Optimiza
             <div 
               className={`bg-white/[0.02] border rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 backdrop-blur-xl h-full cursor-pointer ${
                 activeTier === "PRO" 
-                  ? "border-sky-400/60 ring-1 ring-sky-400/30 shadow-2xl" 
+                  ? "border-geo/60 ring-1 ring-geo/30 shadow-2xl" 
                   : "border-white/[0.08] hover:border-white/[0.18]"
               }`}
               data-cursor-title="Cognitive Defense (Custom)"
@@ -200,19 +200,19 @@ export default function OptimizationPlans({ onSelectPlan, activeTier }: Optimiza
                 {/* Bullet points */}
                 <ul className="mt-8 space-y-4 text-xs text-slate-300 border-t border-white/[0.08] pt-6">
                   <li className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 text-geo shrink-0 mt-0.5" />
                     <span><strong>Custom LLM fine-tuning protection</strong></span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 text-geo shrink-0 mt-0.5" />
                     <span>Dedicated, sandboxed API pipelines</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 text-geo shrink-0 mt-0.5" />
                     <span>High-volume structured data-shaping</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                    <Check className="w-4 h-4 text-geo shrink-0 mt-0.5" />
                     <span>24/7 incident response for citation drops</span>
                   </li>
                 </ul>
