@@ -233,23 +233,18 @@ END HTML`);
   const currentSOV = engineSOV[selectedEngine];
 
   return (
-    <section className="py-24 bg-void relative overflow-hidden" id="live-sandbox" ref={sandboxRef}>
-      <div className="absolute inset-0 pixis-grid-lines opacity-20"></div>
-      
-      {/* Absolute Decorative Glow Blob */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-geo/10 to-slate-200/10 rounded-full blur-[140px] pointer-events-none z-0 animate-pixis-pulse"></div>
-
+    <section className="py-24 bg-void" id="live-sandbox" ref={sandboxRef}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="text-[10px] font-bold tracking-[0.25em]  text-geo font-mono bg-white/[0.03] border border-geo/20 px-4 py-2 rounded-full">
-            REAL-TIME INTELLIGENCE
-          </span>
-          <h2 className="font-display text-3xl font-extrabold text-ink leading-tight sm:text-4xl mt-6">
+          <p className="badge-label text-muted">
+            real-time intelligence
+          </p>
+          <h2 className="mt-4 font-display">
             Generative Share of Voice (SOV)
           </h2>
-          <p className="text-sm text-slate-400 mt-4 leading-relaxed">
+          <p className="mt-4 text-ink-soft">
             Monitor, measure, and claim authority over your retrieval footprint. Toggle AI models to view specific brand visibility states, then audit your own page below.
           </p>
         </div>
@@ -257,23 +252,23 @@ END HTML`);
         {/* =========================================
             PART 1: INTERACTIVE SOV DASHBOARD
             ========================================= */}
-        <div className="bg-white/[0.02] border border-white/[0.08] backdrop-blur-xl rounded-2xl p-6 sm:p-8 mb-12 shadow-2xl">
+        <div className="bg-white border border-line rounded-2xl p-6 sm:p-8 mb-12 shadow-sm">
           
-          <div className="flex flex-col lg:flex-row items-start justify-between gap-8 border-b border-white/[0.08] pb-8 mb-8">
+          <div className="flex flex-col lg:flex-row items-start justify-between gap-8 border-b border-line pb-8 mb-8">
             <div>
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-geo animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-geo" />
                 <h3 className="text-base font-bold text-ink leading-tight font-mono">
                   Live Brand Visibility Index
                 </h3>
               </div>
-              <p className="text-xs text-slate-400 mt-1.5">
+              <p className="text-xs text-ink-soft mt-1.5">
                 Auditing semantic weight and citation occurrence rate based on 25,000+ targeted B2B industry queries.
               </p>
             </div>
 
             {/* AI Platform Toggle Tabs */}
-            <div className="flex flex-wrap gap-1.5 bg-white/[0.02] p-1.5 rounded-xl border border-white/[0.08] w-full sm:w-auto">
+            <div className="flex flex-wrap gap-1.5 bg-abyss p-1.5 rounded-full border border-line w-full sm:w-auto">
               {(["chatgpt", "gemini", "claude", "perplexity"] as EngineType[]).map((eng) => (
                 <button
                   key={eng}
@@ -293,7 +288,7 @@ END HTML`);
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             
             {/* Left Circular Progress Gauge */}
-            <div className="md:col-span-4 flex flex-col items-center justify-center p-6 bg-white/[0.01] rounded-2xl border border-white/[0.08] text-center relative overflow-hidden">
+            <div className="md:col-span-4 flex flex-col items-center justify-center p-6 bg-abyss rounded-2xl border border-line text-center relative overflow-hidden">
               <span className="text-[10px] text-slate-400 font-mono font-bold  tracking-widest mb-4 block">
                 OVERALL SHARE OF VOICE
               </span>
@@ -818,7 +813,7 @@ END HTML`);
                                     <span className="text-[10px] font-mono font-bold text-rose-600 text-rose-400  tracking-wide bg-rose-500/10 px-2 py-0.5 rounded border border-rose-500/20">
                                       Unoptimized Element
                                     </span>
-                                    <p className="text-xs text-rose-900 text-rose-200 font-serif italic mt-3 leading-relaxed">
+                                    <p className="text-xs text-rose-900 text-rose-200 mt-3 leading-relaxed">
                                       "{result.parsedData.standard.unoptimizedSegment}"
                                     </p>
                                   </div>

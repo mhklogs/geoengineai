@@ -5,7 +5,6 @@ import CoreSequence from "./components/CoreSequence";
 import AuditSandbox from "./components/AuditSandbox";
 import OptimizationPlans from "./components/OptimizationPlans";
 import EngineeringTeam from "./components/EngineeringTeam";
-import CustomCursor from "./components/CustomCursor";
 import ScrollReveal from "./components/ScrollReveal";
 import { TierType } from "./types";
 
@@ -86,8 +85,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-void font-sans text-ink flex flex-col antialiased selection:bg-geo selection:text-ink">
-      <CustomCursor />
-
       {/* ================= HEADER ================= */}
       <header className="bg-void/85 backdrop-blur-xl border-b border-line sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
@@ -121,7 +118,7 @@ export default function App() {
           <div className="flex items-center gap-3 shrink-0">
             <a
               href="#live-sandbox"
-              className="hidden sm:inline-flex btn-lift items-center gap-2 rounded-xl bg-geo px-5 py-3 font-head text-xs font-semibold text-ink shadow-[0_0_36px_-10px_rgba(255,59,92,0.9)] hover:bg-geo-soft"
+              className="hidden sm:inline-flex btn items-center gap-2 rounded-full bg-ink px-6 py-3 font-head text-sm font-semibold text-cream hover:bg-black"
             >
               Try it free
               <ArrowRight className="w-3.5 h-3.5" />
@@ -131,7 +128,7 @@ export default function App() {
               onClick={() => setMenuOpen((open) => !open)}
               aria-label="Toggle navigation"
               aria-expanded={menuOpen}
-              className="lg:hidden flex h-11 w-11 items-center justify-center rounded-xl glass text-ink"
+              className="lg:hidden flex h-11 w-11 items-center justify-center rounded-full border border-line bg-white text-ink"
             >
               {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -145,7 +142,7 @@ export default function App() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="rounded-xl px-4 py-3.5 text-sm font-bold text-ink-soft hover:text-ink hover:bg-white/[0.04] font-mono  tracking-widest"
+                className="rounded-xl px-4 py-3.5 text-sm font-bold text-ink-soft hover:text-ink hover:bg-white font-mono  tracking-widest"
               >
                 {item.label}
               </a>
@@ -153,7 +150,7 @@ export default function App() {
             <a
               href="#live-sandbox"
               onClick={() => setMenuOpen(false)}
-              className="mt-3 inline-flex items-center justify-center gap-2 rounded-xl bg-geo px-5 py-4 font-head text-sm font-semibold text-ink shadow-[0_0_36px_-10px_rgba(255,59,92,0.9)]"
+              className="mt-3 btn items-center justify-center gap-2 rounded-full bg-ink px-5 py-4 font-head text-sm font-semibold text-cream"
             >
               Try it free — audit your real page
               <ArrowRight className="w-4 h-4" />
@@ -164,33 +161,23 @@ export default function App() {
 
       {/* ================= HERO ================= */}
       <section id="top" className="relative overflow-hidden pt-24 pb-20 md:pt-32 md:pb-28">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute inset-0 hud-grid" />
-          <div className="aurora -top-28 left-[8%] h-80 w-80 bg-geo/15" />
-          <div className="aurora top-24 right-[6%] h-72 w-72 bg-geo-soft/10" />
-          <div className="absolute -bottom-24 left-1/2 h-64 w-[120%] -translate-x-1/2 rounded-[100%] bg-geo/10 blur-3xl" />
-        </div>
-
         <div className="relative max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <ScrollReveal direction="down" delay={0.05}>
-              <div className="inline-flex items-center gap-2.5 rounded-full glass px-4 py-1.5 text-xs tracking-wide">
-                <span className="pulse-dot flex h-2 w-2 rounded-full bg-geo" />
-                <span className="font-head font-semibold  tracking-[0.18em] text-ink-soft">
-                  GEO Engine · runs on your real pages
-                </span>
-              </div>
+              <p className="badge-label text-muted">
+                GEO Engine · runs on your real pages
+              </p>
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>
-              <h1 className="mt-7 font-display text-4xl  leading-[1.05] leading-tight md:text-6xl">
+              <h1 className="mt-7 font-display">
                 When AI answers,{" "}
-                <span className="text-glow-geo text-geo">cite your brand.</span>
+                <span className="text-geo">cite your brand.</span>
               </h1>
             </ScrollReveal>
 
             <ScrollReveal delay={0.18}>
-              <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink-soft md:text-lg">
+              <p className="mt-6 max-w-2xl text-ink-soft">
                 ChatGPT, Gemini, Claude and Perplexity answer questions about your
                 market every minute. GEO Engine audits your live pages against how
                 these engines retrieve and cite sources — then hands you a scored,
@@ -201,7 +188,7 @@ export default function App() {
             <ScrollReveal delay={0.26}>
               <form
                 onSubmit={handleHeroSearch}
-                className="mt-9 max-w-xl glass-strong rounded-2xl p-2 flex items-center gap-2 focus-within:border-geo/40 transition-colors"
+                className="mt-9 max-w-xl bg-white border border-line rounded-2xl p-2 flex items-center gap-2 focus-within:border-geo/40 transition-colors"
               >
                 <div className="pl-3 text-geo shrink-0">
                   <Globe className="w-5 h-5" />
@@ -215,7 +202,7 @@ export default function App() {
                 />
                 <button
                   type="submit"
-                  className="btn-lift shrink-0 inline-flex items-center gap-2 rounded-xl bg-geo px-5 py-3.5 font-head text-xs font-semibold text-ink  tracking-wider shadow-[0_0_32px_-10px_rgba(255,59,92,0.9)] hover:bg-geo-soft"
+                  className="btn shrink-0 items-center gap-2 rounded-full bg-ink px-5 py-3 font-head text-sm font-semibold text-cream hover:bg-black"
                 >
                   <Search className="w-4 h-4" />
                   Get my audit
@@ -241,10 +228,10 @@ export default function App() {
                 { v: "1", l: "free trial, no card" },
               ].map((s) => (
                 <div key={s.l} className="text-left sm:text-center">
-                  <p className="font-display text-3xl text-glow-white md:text-4xl">
+                  <p className="font-display text-3xl text-ink md:text-4xl">
                     {s.v}
                   </p>
-                  <p className="mt-1 text-[11px]  tracking-[0.2em] text-muted">
+                  <p className="mt-1 text-[11px] text-muted">
                     {s.l}
                   </p>
                 </div>
@@ -257,17 +244,17 @@ export default function App() {
       {/* ================= CORE PIPELINE ================= */}
       <CoreSequence />
 
-      {/* ================= LIVE AUDIT SURFACE ================= */}
-      <section className="border-t border-line/60 bg-abyss/40 py-14">
+{/* ================= LIVE AUDIT SURFACE ================= */}
+      <section className="border-t border-line bg-abyss/40 py-14">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
-            <p className="font-head text-sm font-semibold  tracking-[0.24em] text-geo">
+            <p className="badge-label text-muted">
               run it on your work
             </p>
-            <h2 className="mt-2 font-display text-3xl  leading-tight md:text-4xl">
+            <h2 className="mt-2 font-display">
               Audit a real page, free
             </h2>
-            <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-ink-soft md:text-base">
+            <p className="mx-auto mt-3 max-w-xl text-ink-soft">
               Pick a sample or paste your own URL and HTML below. The audit runs
               live, returns a scored plan, and keeps the rewrite suggestions —
               yours to keep either way.
@@ -292,10 +279,10 @@ export default function App() {
       <section className="border-y border-line/60 bg-abyss py-20">
         <div className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <p className="text-center font-head text-sm font-semibold  tracking-[0.24em] text-geo">
+            <p className="text-center badge-label text-muted">
               team reports
             </p>
-            <h2 className="mx-auto mt-2 max-w-2xl text-center font-display text-3xl  leading-tight md:text-4xl">
+            <h2 className="mx-auto mt-2 max-w-2xl text-center font-display">
               What marketing teams do with one audit
             </h2>
           </ScrollReveal>
@@ -321,10 +308,10 @@ export default function App() {
       {/* ================= FAQ ================= */}
       <section className="mx-auto max-w-3xl px-5 py-20 sm:px-6">
         <ScrollReveal>
-          <p className="text-center font-head text-sm font-semibold  tracking-[0.24em] text-geo">
+          <p className="text-center badge-label text-muted">
             straight answers
           </p>
-          <h2 className="mt-2 text-center font-display text-3xl  leading-tight md:text-4xl">
+          <h2 className="mt-2 text-center font-display">
             Before you ask
           </h2>
         </ScrollReveal>
@@ -350,33 +337,29 @@ export default function App() {
 
       {/* ================= BOTTOM CTA ================= */}
       <section className="relative overflow-hidden pb-24">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 hud-grid" />
-          <div className="aurora -bottom-8 left-1/3 h-72 w-72 bg-geo/15" />
-        </div>
         <ScrollReveal>
-          <div className="accent-edge panel mx-auto max-w-4xl p-8 text-center md:p-12">
-            <p className="font-head text-sm font-semibold  tracking-[0.24em] text-geo">
+          <div className="panel mx-auto max-w-4xl p-8 text-center md:p-12">
+            <p className="badge-label text-muted">
               free trial on real work
             </p>
-            <h2 className="mx-auto mt-3 max-w-2xl font-display text-3xl  leading-tight md:text-5xl">
+            <h2 className="mx-auto mt-3 max-w-2xl font-display">
               Find out who the AI answer engines cite — you or your competitor
             </h2>
-            <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-ink-soft md:text-base">
+            <p className="mx-auto mt-4 max-w-xl text-ink-soft">
               One free audit on any page you own. Get the readiness score, the
               blockers, and the rewrites — no credit card, keep everything.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <a
                 href="#live-sandbox"
-                className="btn-lift inline-flex items-center gap-2 rounded-xl bg-geo px-8 py-3.5 font-head font-semibold text-ink shadow-[0_0_44px_-10px_rgba(255,59,92,0.9)] hover:bg-geo-soft"
+                className="btn bg-ink px-8 py-4 font-head font-semibold text-cream hover:bg-black rounded-full"
               >
                 Audit your page free
                 <ArrowRight className="w-4 h-4" />
               </a>
               <a
                 href="#core-pipeline"
-                className="btn-lift inline-flex items-center gap-2 rounded-xl glass px-8 py-3.5 font-head font-semibold text-ink transition hover:bg-white/5"
+                className="btn btn-ghost px-8 py-4 font-head font-semibold rounded-full"
               >
                 See how it works
               </a>
@@ -439,7 +422,7 @@ export default function App() {
                   Status
                 </span>
                 <span className="flex items-center gap-1.5 text-geo font-semibold">
-                  <span className="w-1.5 h-1.5 rounded-full bg-geo animate-pulse" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-geo" />
                   Audit service live
                 </span>
                 <span>Free trial open</span>
